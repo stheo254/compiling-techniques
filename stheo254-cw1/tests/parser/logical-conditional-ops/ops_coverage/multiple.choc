@@ -1,0 +1,33 @@
+# RUN: choco-opt %s | filecheck %s
+
+1 if True else 0
+a and b
+not 1
+c or d
+
+# CHECK:  builtin.module {
+# CHECK_NEXT :    "choco_ast.program"() ({
+# CHECK_NEXT :    ^0:
+# CHECK_NEXT :    }, {
+# CHECK_NEXT :      "choco_ast.if_expr"() ({
+# CHECK_NEXT :        "choco_ast.literal"() <{"value" = #choco_ast.bool<True>}> : () -> ()
+# CHECK_NEXT :      }, {
+# CHECK_NEXT :        "choco_ast.literal"() <{"value" = 1 : i32}> : () -> ()
+# CHECK_NEXT :      }, {
+# CHECK_NEXT :        "choco_ast.literal"() <{"value" = 0 : i32}> : () -> ()
+# CHECK_NEXT :      }) : () -> ()
+# CHECK_NEXT :      "choco_ast.binary_expr"() <{"op" = "and"}> ({
+# CHECK_NEXT :        "choco_ast.id_expr"() <{"id" = "a"}> : () -> ()
+# CHECK_NEXT :      }, {
+# CHECK_NEXT :        "choco_ast.id_expr"() <{"id" = "b"}> : () -> ()
+# CHECK_NEXT :      }) : () -> ()
+# CHECK_NEXT :      "choco_ast.unary_expr"() <{"op" = "not"}> ({
+# CHECK_NEXT :        "choco_ast.literal"() <{"value" = 1 : i32}> : () -> ()
+# CHECK_NEXT :      }) : () -> ()
+# CHECK_NEXT :      "choco_ast.binary_expr"() <{"op" = "or"}> ({
+# CHECK_NEXT :        "choco_ast.id_expr"() <{"id" = "c"}> : () -> ()
+# CHECK_NEXT :      }, {
+# CHECK_NEXT :        "choco_ast.id_expr"() <{"id" = "d"}> : () -> ()
+# CHECK_NEXT :      }) : () -> ()
+# CHECK_NEXT :    }) : () -> ()
+# CHECK_NEXT :  }

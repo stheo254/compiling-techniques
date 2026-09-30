@@ -1,0 +1,21 @@
+# RUN: choco-opt %s | filecheck %s
+
+True
+2
+False
+4
+None
+"Heelo"
+
+# CHECK:      builtin.module {
+# CHECK-NEXT:   "choco_ast.program"() ({
+# CHECK-NEXT:   ^0:
+# CHECK-NEXT:   }, {
+# CHECK-NEXT:     "choco_ast.literal"() <{"value" = #choco_ast.bool<True>}> : () -> ()
+# CHECK-NEXT:     "choco_ast.literal"() <{"value" = 2 : i32}> : () -> ()
+# CHECK-NEXT:     "choco_ast.literal"() <{"value" = #choco_ast.bool<False>}> : () -> ()
+# CHECK-NEXT:     "choco_ast.literal"() <{"value" = 4 : i32}> : () -> ()
+# CHECK-NEXT:     "choco_ast.literal"() <{"value" = #choco_ast.none}> : () -> ()
+# CHECK-NEXT:     "choco_ast.literal"() <{"value" = "Heelo"}> : () -> ()
+# CHECK-NEXT:   }) : () -> ()
+# CHECK-NEXT: }

@@ -1,0 +1,3 @@
+[console_scripts]
+choco-lexer = tools.choco_lexer:__main__
+choco-opt = tools.choco_opt:__main__
