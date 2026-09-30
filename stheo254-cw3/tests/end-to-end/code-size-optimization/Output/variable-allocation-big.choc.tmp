@@ -1,0 +1,4836 @@
+	.data
+_heap:	.space 102400
+_heap_tree_ptr:	.word 100
+	.text
+# Initialize the heap memory
+	la t0, _heap
+	la t1, _heap_tree_ptr
+	sw t0, 0(t1)
+	jal ra, _main
+_main:
+	addi sp, sp, -4
+	sw ra, 0(sp)
+	addi sp, sp, -2028
+	addi sp, sp, -408
+	mv tp, sp
+
+    	# %0 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 0(sp)
+	addi t0, sp, 2028
+	sw t0, 4(sp)
+
+    	# "riscv_ssa.sw"(%0, %1) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 0(sp)
+	lw t2, 4(sp)
+	sw t1, 0(t2)
+
+    	# %2 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 8(sp)
+	addi t0, sp, 2032
+	sw t0, 12(sp)
+
+    	# "riscv_ssa.sw"(%2, %3) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 8(sp)
+	lw t2, 12(sp)
+	sw t1, 0(t2)
+
+    	# %4 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 16(sp)
+	addi t0, sp, 2036
+	sw t0, 20(sp)
+
+    	# "riscv_ssa.sw"(%4, %5) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 16(sp)
+	lw t2, 20(sp)
+	sw t1, 0(t2)
+
+    	# %6 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 24(sp)
+	addi t0, sp, 2040
+	sw t0, 28(sp)
+
+    	# "riscv_ssa.sw"(%6, %7) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 24(sp)
+	lw t2, 28(sp)
+	sw t1, 0(t2)
+
+    	# %8 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 32(sp)
+	addi t0, sp, 2044
+	sw t0, 36(sp)
+
+    	# "riscv_ssa.sw"(%8, %9) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 32(sp)
+	lw t2, 36(sp)
+	sw t1, 0(t2)
+
+    	# %10 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 40(sp)
+	addi t0, sp, 2048
+	sw t0, 44(sp)
+
+    	# "riscv_ssa.sw"(%10, %11) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 40(sp)
+	lw t2, 44(sp)
+	sw t1, 0(t2)
+
+    	# %12 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 48(sp)
+	addi t0, sp, 2052
+	sw t0, 52(sp)
+
+    	# "riscv_ssa.sw"(%12, %13) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 48(sp)
+	lw t2, 52(sp)
+	sw t1, 0(t2)
+
+    	# %14 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 56(sp)
+	addi t0, sp, 2056
+	sw t0, 60(sp)
+
+    	# "riscv_ssa.sw"(%14, %15) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 56(sp)
+	lw t2, 60(sp)
+	sw t1, 0(t2)
+
+    	# %16 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 64(sp)
+	addi t0, sp, 2060
+	sw t0, 68(sp)
+
+    	# "riscv_ssa.sw"(%16, %17) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 64(sp)
+	lw t2, 68(sp)
+	sw t1, 0(t2)
+
+    	# %18 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 72(sp)
+	addi t0, sp, 2064
+	sw t0, 76(sp)
+
+    	# "riscv_ssa.sw"(%18, %19) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 72(sp)
+	lw t2, 76(sp)
+	sw t1, 0(t2)
+
+    	# %20 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 80(sp)
+	addi t0, sp, 2068
+	sw t0, 84(sp)
+
+    	# "riscv_ssa.sw"(%20, %21) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 80(sp)
+	lw t2, 84(sp)
+	sw t1, 0(t2)
+
+    	# %22 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 88(sp)
+	addi t0, sp, 2072
+	sw t0, 92(sp)
+
+    	# "riscv_ssa.sw"(%22, %23) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 88(sp)
+	lw t2, 92(sp)
+	sw t1, 0(t2)
+
+    	# %24 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 96(sp)
+	addi t0, sp, 2076
+	sw t0, 100(sp)
+
+    	# "riscv_ssa.sw"(%24, %25) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 96(sp)
+	lw t2, 100(sp)
+	sw t1, 0(t2)
+
+    	# %26 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 104(sp)
+	addi t0, sp, 2080
+	sw t0, 108(sp)
+
+    	# "riscv_ssa.sw"(%26, %27) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 104(sp)
+	lw t2, 108(sp)
+	sw t1, 0(t2)
+
+    	# %28 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 112(sp)
+	addi t0, sp, 2084
+	sw t0, 116(sp)
+
+    	# "riscv_ssa.sw"(%28, %29) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 112(sp)
+	lw t2, 116(sp)
+	sw t1, 0(t2)
+
+    	# %30 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 120(sp)
+	addi t0, sp, 2088
+	sw t0, 124(sp)
+
+    	# "riscv_ssa.sw"(%30, %31) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 120(sp)
+	lw t2, 124(sp)
+	sw t1, 0(t2)
+
+    	# %32 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 128(sp)
+	addi t0, sp, 2092
+	sw t0, 132(sp)
+
+    	# "riscv_ssa.sw"(%32, %33) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 128(sp)
+	lw t2, 132(sp)
+	sw t1, 0(t2)
+
+    	# %34 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 136(sp)
+	addi t0, sp, 2096
+	sw t0, 140(sp)
+
+    	# "riscv_ssa.sw"(%34, %35) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 136(sp)
+	lw t2, 140(sp)
+	sw t1, 0(t2)
+
+    	# %36 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 144(sp)
+	addi t0, sp, 2100
+	sw t0, 148(sp)
+
+    	# "riscv_ssa.sw"(%36, %37) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 144(sp)
+	lw t2, 148(sp)
+	sw t1, 0(t2)
+
+    	# %38 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 152(sp)
+	addi t0, sp, 2104
+	sw t0, 156(sp)
+
+    	# "riscv_ssa.sw"(%38, %39) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 152(sp)
+	lw t2, 156(sp)
+	sw t1, 0(t2)
+
+    	# %40 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 160(sp)
+	addi t0, sp, 2108
+	sw t0, 164(sp)
+
+    	# "riscv_ssa.sw"(%40, %41) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 160(sp)
+	lw t2, 164(sp)
+	sw t1, 0(t2)
+
+    	# %42 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 168(sp)
+	addi t0, sp, 2112
+	sw t0, 172(sp)
+
+    	# "riscv_ssa.sw"(%42, %43) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 168(sp)
+	lw t2, 172(sp)
+	sw t1, 0(t2)
+
+    	# %44 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 176(sp)
+	addi t0, sp, 2116
+	sw t0, 180(sp)
+
+    	# "riscv_ssa.sw"(%44, %45) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 176(sp)
+	lw t2, 180(sp)
+	sw t1, 0(t2)
+
+    	# %46 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 184(sp)
+	addi t0, sp, 2120
+	sw t0, 188(sp)
+
+    	# "riscv_ssa.sw"(%46, %47) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 184(sp)
+	lw t2, 188(sp)
+	sw t1, 0(t2)
+
+    	# %48 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 192(sp)
+	addi t0, sp, 2124
+	sw t0, 196(sp)
+
+    	# "riscv_ssa.sw"(%48, %49) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 192(sp)
+	lw t2, 196(sp)
+	sw t1, 0(t2)
+
+    	# %50 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 200(sp)
+	addi t0, sp, 2128
+	sw t0, 204(sp)
+
+    	# "riscv_ssa.sw"(%50, %51) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 200(sp)
+	lw t2, 204(sp)
+	sw t1, 0(t2)
+
+    	# %52 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 208(sp)
+	addi t0, sp, 2132
+	sw t0, 212(sp)
+
+    	# "riscv_ssa.sw"(%52, %53) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 208(sp)
+	lw t2, 212(sp)
+	sw t1, 0(t2)
+
+    	# %54 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 216(sp)
+	addi t0, sp, 2136
+	sw t0, 220(sp)
+
+    	# "riscv_ssa.sw"(%54, %55) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 216(sp)
+	lw t2, 220(sp)
+	sw t1, 0(t2)
+
+    	# %56 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 224(sp)
+	addi t0, sp, 2140
+	sw t0, 228(sp)
+
+    	# "riscv_ssa.sw"(%56, %57) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 224(sp)
+	lw t2, 228(sp)
+	sw t1, 0(t2)
+
+    	# %58 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 232(sp)
+	addi t0, sp, 2144
+	sw t0, 236(sp)
+
+    	# "riscv_ssa.sw"(%58, %59) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 232(sp)
+	lw t2, 236(sp)
+	sw t1, 0(t2)
+
+    	# %60 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 240(sp)
+	addi t0, sp, 2148
+	sw t0, 244(sp)
+
+    	# "riscv_ssa.sw"(%60, %61) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 240(sp)
+	lw t2, 244(sp)
+	sw t1, 0(t2)
+
+    	# %62 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 248(sp)
+	addi t0, sp, 2152
+	sw t0, 252(sp)
+
+    	# "riscv_ssa.sw"(%62, %63) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 248(sp)
+	lw t2, 252(sp)
+	sw t1, 0(t2)
+
+    	# %64 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 256(sp)
+	addi t0, sp, 2156
+	sw t0, 260(sp)
+
+    	# "riscv_ssa.sw"(%64, %65) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 256(sp)
+	lw t2, 260(sp)
+	sw t1, 0(t2)
+
+    	# %66 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 264(sp)
+	addi t0, sp, 2160
+	sw t0, 268(sp)
+
+    	# "riscv_ssa.sw"(%66, %67) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 264(sp)
+	lw t2, 268(sp)
+	sw t1, 0(t2)
+
+    	# %68 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 272(sp)
+	addi t0, sp, 2164
+	sw t0, 276(sp)
+
+    	# "riscv_ssa.sw"(%68, %69) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 272(sp)
+	lw t2, 276(sp)
+	sw t1, 0(t2)
+
+    	# %70 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 280(sp)
+	addi t0, sp, 2168
+	sw t0, 284(sp)
+
+    	# "riscv_ssa.sw"(%70, %71) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 280(sp)
+	lw t2, 284(sp)
+	sw t1, 0(t2)
+
+    	# %72 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 288(sp)
+	addi t0, sp, 2172
+	sw t0, 292(sp)
+
+    	# "riscv_ssa.sw"(%72, %73) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 288(sp)
+	lw t2, 292(sp)
+	sw t1, 0(t2)
+
+    	# %74 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 296(sp)
+	addi t0, sp, 2176
+	sw t0, 300(sp)
+
+    	# "riscv_ssa.sw"(%74, %75) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 296(sp)
+	lw t2, 300(sp)
+	sw t1, 0(t2)
+
+    	# %76 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 304(sp)
+	addi t0, sp, 2180
+	sw t0, 308(sp)
+
+    	# "riscv_ssa.sw"(%76, %77) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 304(sp)
+	lw t2, 308(sp)
+	sw t1, 0(t2)
+
+    	# %78 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 312(sp)
+	addi t0, sp, 2184
+	sw t0, 316(sp)
+
+    	# "riscv_ssa.sw"(%78, %79) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 312(sp)
+	lw t2, 316(sp)
+	sw t1, 0(t2)
+
+    	# %80 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 320(sp)
+	addi t0, sp, 2188
+	sw t0, 324(sp)
+
+    	# "riscv_ssa.sw"(%80, %81) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 320(sp)
+	lw t2, 324(sp)
+	sw t1, 0(t2)
+
+    	# %82 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 328(sp)
+	addi t0, sp, 2192
+	sw t0, 332(sp)
+
+    	# "riscv_ssa.sw"(%82, %83) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 328(sp)
+	lw t2, 332(sp)
+	sw t1, 0(t2)
+
+    	# %84 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 336(sp)
+	addi t0, sp, 2196
+	sw t0, 340(sp)
+
+    	# "riscv_ssa.sw"(%84, %85) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 336(sp)
+	lw t2, 340(sp)
+	sw t1, 0(t2)
+
+    	# %86 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 344(sp)
+	addi t0, sp, 2200
+	sw t0, 348(sp)
+
+    	# "riscv_ssa.sw"(%86, %87) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 344(sp)
+	lw t2, 348(sp)
+	sw t1, 0(t2)
+
+    	# %88 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 352(sp)
+	addi t0, sp, 2204
+	sw t0, 356(sp)
+
+    	# "riscv_ssa.sw"(%88, %89) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 352(sp)
+	lw t2, 356(sp)
+	sw t1, 0(t2)
+
+    	# %90 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 360(sp)
+	addi t0, sp, 2208
+	sw t0, 364(sp)
+
+    	# "riscv_ssa.sw"(%90, %91) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 360(sp)
+	lw t2, 364(sp)
+	sw t1, 0(t2)
+
+    	# %92 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 368(sp)
+	addi t0, sp, 2212
+	sw t0, 372(sp)
+
+    	# "riscv_ssa.sw"(%92, %93) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 368(sp)
+	lw t2, 372(sp)
+	sw t1, 0(t2)
+
+    	# %94 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 376(sp)
+	addi t0, sp, 2216
+	sw t0, 380(sp)
+
+    	# "riscv_ssa.sw"(%94, %95) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 376(sp)
+	lw t2, 380(sp)
+	sw t1, 0(t2)
+
+    	# %96 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 384(sp)
+	addi t0, sp, 2220
+	sw t0, 388(sp)
+
+    	# "riscv_ssa.sw"(%96, %97) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 384(sp)
+	lw t2, 388(sp)
+	sw t1, 0(t2)
+
+    	# %98 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 392(sp)
+	addi t0, sp, 2224
+	sw t0, 396(sp)
+
+    	# "riscv_ssa.sw"(%98, %99) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 392(sp)
+	lw t2, 396(sp)
+	sw t1, 0(t2)
+
+    	# %100 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 400(sp)
+	addi t0, sp, 2228
+	sw t0, 404(sp)
+
+    	# "riscv_ssa.sw"(%100, %101) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 400(sp)
+	lw t2, 404(sp)
+	sw t1, 0(t2)
+
+    	# %102 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 408(sp)
+	addi t0, sp, 2232
+	sw t0, 412(sp)
+
+    	# "riscv_ssa.sw"(%102, %103) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 408(sp)
+	lw t2, 412(sp)
+	sw t1, 0(t2)
+
+    	# %104 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 416(sp)
+	addi t0, sp, 2236
+	sw t0, 420(sp)
+
+    	# "riscv_ssa.sw"(%104, %105) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 416(sp)
+	lw t2, 420(sp)
+	sw t1, 0(t2)
+
+    	# %106 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 424(sp)
+	addi t0, sp, 2240
+	sw t0, 428(sp)
+
+    	# "riscv_ssa.sw"(%106, %107) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 424(sp)
+	lw t2, 428(sp)
+	sw t1, 0(t2)
+
+    	# %108 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 432(sp)
+	addi t0, sp, 2244
+	sw t0, 436(sp)
+
+    	# "riscv_ssa.sw"(%108, %109) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 432(sp)
+	lw t2, 436(sp)
+	sw t1, 0(t2)
+
+    	# %110 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 440(sp)
+	addi t0, sp, 2248
+	sw t0, 444(sp)
+
+    	# "riscv_ssa.sw"(%110, %111) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 440(sp)
+	lw t2, 444(sp)
+	sw t1, 0(t2)
+
+    	# %112 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 448(sp)
+	addi t0, sp, 2252
+	sw t0, 452(sp)
+
+    	# "riscv_ssa.sw"(%112, %113) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 448(sp)
+	lw t2, 452(sp)
+	sw t1, 0(t2)
+
+    	# %114 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 456(sp)
+	addi t0, sp, 2256
+	sw t0, 460(sp)
+
+    	# "riscv_ssa.sw"(%114, %115) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 456(sp)
+	lw t2, 460(sp)
+	sw t1, 0(t2)
+
+    	# %116 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 464(sp)
+	addi t0, sp, 2260
+	sw t0, 468(sp)
+
+    	# "riscv_ssa.sw"(%116, %117) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 464(sp)
+	lw t2, 468(sp)
+	sw t1, 0(t2)
+
+    	# %118 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 472(sp)
+	addi t0, sp, 2264
+	sw t0, 476(sp)
+
+    	# "riscv_ssa.sw"(%118, %119) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 472(sp)
+	lw t2, 476(sp)
+	sw t1, 0(t2)
+
+    	# %120 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 480(sp)
+	addi t0, sp, 2268
+	sw t0, 484(sp)
+
+    	# "riscv_ssa.sw"(%120, %121) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 480(sp)
+	lw t2, 484(sp)
+	sw t1, 0(t2)
+
+    	# %122 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 488(sp)
+	addi t0, sp, 2272
+	sw t0, 492(sp)
+
+    	# "riscv_ssa.sw"(%122, %123) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 488(sp)
+	lw t2, 492(sp)
+	sw t1, 0(t2)
+
+    	# %124 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 496(sp)
+	addi t0, sp, 2276
+	sw t0, 500(sp)
+
+    	# "riscv_ssa.sw"(%124, %125) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 496(sp)
+	lw t2, 500(sp)
+	sw t1, 0(t2)
+
+    	# %126 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 504(sp)
+	addi t0, sp, 2280
+	sw t0, 508(sp)
+
+    	# "riscv_ssa.sw"(%126, %127) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 504(sp)
+	lw t2, 508(sp)
+	sw t1, 0(t2)
+
+    	# %128 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 512(sp)
+	addi t0, sp, 2284
+	sw t0, 516(sp)
+
+    	# "riscv_ssa.sw"(%128, %129) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 512(sp)
+	lw t2, 516(sp)
+	sw t1, 0(t2)
+
+    	# %130 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 520(sp)
+	addi t0, sp, 2288
+	sw t0, 524(sp)
+
+    	# "riscv_ssa.sw"(%130, %131) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 520(sp)
+	lw t2, 524(sp)
+	sw t1, 0(t2)
+
+    	# %132 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 528(sp)
+	addi t0, sp, 2292
+	sw t0, 532(sp)
+
+    	# "riscv_ssa.sw"(%132, %133) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 528(sp)
+	lw t2, 532(sp)
+	sw t1, 0(t2)
+
+    	# %134 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 536(sp)
+	addi t0, sp, 2296
+	sw t0, 540(sp)
+
+    	# "riscv_ssa.sw"(%134, %135) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 536(sp)
+	lw t2, 540(sp)
+	sw t1, 0(t2)
+
+    	# %136 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 544(sp)
+	addi t0, sp, 2300
+	sw t0, 548(sp)
+
+    	# "riscv_ssa.sw"(%136, %137) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 544(sp)
+	lw t2, 548(sp)
+	sw t1, 0(t2)
+
+    	# %138 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 552(sp)
+	addi t0, sp, 2304
+	sw t0, 556(sp)
+
+    	# "riscv_ssa.sw"(%138, %139) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 552(sp)
+	lw t2, 556(sp)
+	sw t1, 0(t2)
+
+    	# %140 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 560(sp)
+	addi t0, sp, 2308
+	sw t0, 564(sp)
+
+    	# "riscv_ssa.sw"(%140, %141) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 560(sp)
+	lw t2, 564(sp)
+	sw t1, 0(t2)
+
+    	# %142 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 568(sp)
+	addi t0, sp, 2312
+	sw t0, 572(sp)
+
+    	# "riscv_ssa.sw"(%142, %143) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 568(sp)
+	lw t2, 572(sp)
+	sw t1, 0(t2)
+
+    	# %144 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 576(sp)
+	addi t0, sp, 2316
+	sw t0, 580(sp)
+
+    	# "riscv_ssa.sw"(%144, %145) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 576(sp)
+	lw t2, 580(sp)
+	sw t1, 0(t2)
+
+    	# %146 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 584(sp)
+	addi t0, sp, 2320
+	sw t0, 588(sp)
+
+    	# "riscv_ssa.sw"(%146, %147) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 584(sp)
+	lw t2, 588(sp)
+	sw t1, 0(t2)
+
+    	# %148 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 592(sp)
+	addi t0, sp, 2324
+	sw t0, 596(sp)
+
+    	# "riscv_ssa.sw"(%148, %149) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 592(sp)
+	lw t2, 596(sp)
+	sw t1, 0(t2)
+
+    	# %150 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 600(sp)
+	addi t0, sp, 2328
+	sw t0, 604(sp)
+
+    	# "riscv_ssa.sw"(%150, %151) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 600(sp)
+	lw t2, 604(sp)
+	sw t1, 0(t2)
+
+    	# %152 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 608(sp)
+	addi t0, sp, 2332
+	sw t0, 612(sp)
+
+    	# "riscv_ssa.sw"(%152, %153) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 608(sp)
+	lw t2, 612(sp)
+	sw t1, 0(t2)
+
+    	# %154 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 616(sp)
+	addi t0, sp, 2336
+	sw t0, 620(sp)
+
+    	# "riscv_ssa.sw"(%154, %155) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 616(sp)
+	lw t2, 620(sp)
+	sw t1, 0(t2)
+
+    	# %156 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 624(sp)
+	addi t0, sp, 2340
+	sw t0, 628(sp)
+
+    	# "riscv_ssa.sw"(%156, %157) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 624(sp)
+	lw t2, 628(sp)
+	sw t1, 0(t2)
+
+    	# %158 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 632(sp)
+	addi t0, sp, 2344
+	sw t0, 636(sp)
+
+    	# "riscv_ssa.sw"(%158, %159) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 632(sp)
+	lw t2, 636(sp)
+	sw t1, 0(t2)
+
+    	# %160 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 640(sp)
+	addi t0, sp, 2348
+	sw t0, 644(sp)
+
+    	# "riscv_ssa.sw"(%160, %161) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 640(sp)
+	lw t2, 644(sp)
+	sw t1, 0(t2)
+
+    	# %162 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 648(sp)
+	addi t0, sp, 2352
+	sw t0, 652(sp)
+
+    	# "riscv_ssa.sw"(%162, %163) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 648(sp)
+	lw t2, 652(sp)
+	sw t1, 0(t2)
+
+    	# %164 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 656(sp)
+	addi t0, sp, 2356
+	sw t0, 660(sp)
+
+    	# "riscv_ssa.sw"(%164, %165) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 656(sp)
+	lw t2, 660(sp)
+	sw t1, 0(t2)
+
+    	# %166 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 664(sp)
+	addi t0, sp, 2360
+	sw t0, 668(sp)
+
+    	# "riscv_ssa.sw"(%166, %167) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 664(sp)
+	lw t2, 668(sp)
+	sw t1, 0(t2)
+
+    	# %168 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 672(sp)
+	addi t0, sp, 2364
+	sw t0, 676(sp)
+
+    	# "riscv_ssa.sw"(%168, %169) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 672(sp)
+	lw t2, 676(sp)
+	sw t1, 0(t2)
+
+    	# %170 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 680(sp)
+	addi t0, sp, 2368
+	sw t0, 684(sp)
+
+    	# "riscv_ssa.sw"(%170, %171) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 680(sp)
+	lw t2, 684(sp)
+	sw t1, 0(t2)
+
+    	# %172 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 688(sp)
+	addi t0, sp, 2372
+	sw t0, 692(sp)
+
+    	# "riscv_ssa.sw"(%172, %173) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 688(sp)
+	lw t2, 692(sp)
+	sw t1, 0(t2)
+
+    	# %174 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 696(sp)
+	addi t0, sp, 2376
+	sw t0, 700(sp)
+
+    	# "riscv_ssa.sw"(%174, %175) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 696(sp)
+	lw t2, 700(sp)
+	sw t1, 0(t2)
+
+    	# %176 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 704(sp)
+	addi t0, sp, 2380
+	sw t0, 708(sp)
+
+    	# "riscv_ssa.sw"(%176, %177) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 704(sp)
+	lw t2, 708(sp)
+	sw t1, 0(t2)
+
+    	# %178 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 712(sp)
+	addi t0, sp, 2384
+	sw t0, 716(sp)
+
+    	# "riscv_ssa.sw"(%178, %179) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 712(sp)
+	lw t2, 716(sp)
+	sw t1, 0(t2)
+
+    	# %180 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 720(sp)
+	addi t0, sp, 2388
+	sw t0, 724(sp)
+
+    	# "riscv_ssa.sw"(%180, %181) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 720(sp)
+	lw t2, 724(sp)
+	sw t1, 0(t2)
+
+    	# %182 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 728(sp)
+	addi t0, sp, 2392
+	sw t0, 732(sp)
+
+    	# "riscv_ssa.sw"(%182, %183) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 728(sp)
+	lw t2, 732(sp)
+	sw t1, 0(t2)
+
+    	# %184 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 736(sp)
+	addi t0, sp, 2396
+	sw t0, 740(sp)
+
+    	# "riscv_ssa.sw"(%184, %185) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 736(sp)
+	lw t2, 740(sp)
+	sw t1, 0(t2)
+
+    	# %186 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 744(sp)
+	addi t0, sp, 2400
+	sw t0, 748(sp)
+
+    	# "riscv_ssa.sw"(%186, %187) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 744(sp)
+	lw t2, 748(sp)
+	sw t1, 0(t2)
+
+    	# %188 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 752(sp)
+	addi t0, sp, 2404
+	sw t0, 756(sp)
+
+    	# "riscv_ssa.sw"(%188, %189) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 752(sp)
+	lw t2, 756(sp)
+	sw t1, 0(t2)
+
+    	# %190 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 760(sp)
+	addi t0, sp, 2408
+	sw t0, 764(sp)
+
+    	# "riscv_ssa.sw"(%190, %191) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 760(sp)
+	lw t2, 764(sp)
+	sw t1, 0(t2)
+
+    	# %192 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 768(sp)
+	addi t0, sp, 2412
+	sw t0, 772(sp)
+
+    	# "riscv_ssa.sw"(%192, %193) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 768(sp)
+	lw t2, 772(sp)
+	sw t1, 0(t2)
+
+    	# %194 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 776(sp)
+	addi t0, sp, 2416
+	sw t0, 780(sp)
+
+    	# "riscv_ssa.sw"(%194, %195) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 776(sp)
+	lw t2, 780(sp)
+	sw t1, 0(t2)
+
+    	# %196 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 784(sp)
+	addi t0, sp, 2420
+	sw t0, 788(sp)
+
+    	# "riscv_ssa.sw"(%196, %197) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 784(sp)
+	lw t2, 788(sp)
+	sw t1, 0(t2)
+
+    	# %198 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 792(sp)
+	addi t0, sp, 2424
+	sw t0, 796(sp)
+
+    	# "riscv_ssa.sw"(%198, %199) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 792(sp)
+	lw t2, 796(sp)
+	sw t1, 0(t2)
+
+    	# %200 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 800(sp)
+	addi t0, sp, 2428
+	sw t0, 804(sp)
+
+    	# "riscv_ssa.sw"(%200, %201) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 800(sp)
+	lw t2, 804(sp)
+	sw t1, 0(t2)
+
+    	# %202 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 808(sp)
+	addi t0, sp, 2432
+	sw t0, 812(sp)
+
+    	# "riscv_ssa.sw"(%202, %203) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 808(sp)
+	lw t2, 812(sp)
+	sw t1, 0(t2)
+
+    	# riscv_ssa.call
+	jal ra, _input
+	sw a0, 816(sp)
+
+    	# riscv_ssa.call
+	lw a0, 816(sp)
+	jal ra, str_to_int
+	sw a0, 820(sp)
+
+    	# "riscv_ssa.sw"(%345, %1) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 820(sp)
+	lw t2, 4(sp)
+	sw t1, 0(t2)
+
+    	# %346 = "riscv_ssa.lw"(%1) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 4(sp)
+	lw t0, 0(t1)
+	sw t0, 824(sp)
+
+    	# %347 = "riscv_ssa.li"() <{"immediate" = 4 : i32}> : () -> !riscv_ssa.re
+	li t0, 4
+	sw t0, 828(sp)
+
+    	# %348 = "riscv_ssa.add"(%346, %347) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 824(sp)
+	lw t2, 828(sp)
+	add t0, t1, t2
+	sw t0, 832(sp)
+
+    	# "riscv_ssa.sw"(%348, %3) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 832(sp)
+	lw t2, 12(sp)
+	sw t1, 0(t2)
+
+    	# %349 = "riscv_ssa.lw"(%3) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 12(sp)
+	lw t0, 0(t1)
+	sw t0, 836(sp)
+
+    	# %350 = "riscv_ssa.li"() <{"immediate" = 5 : i32}> : () -> !riscv_ssa.re
+	li t0, 5
+	sw t0, 840(sp)
+
+    	# %351 = "riscv_ssa.mul"(%349, %350) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 836(sp)
+	lw t2, 840(sp)
+	mul t0, t1, t2
+	sw t0, 844(sp)
+
+    	# "riscv_ssa.sw"(%351, %5) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 844(sp)
+	lw t2, 20(sp)
+	sw t1, 0(t2)
+
+    	# %352 = "riscv_ssa.lw"(%5) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 20(sp)
+	lw t0, 0(t1)
+	sw t0, 848(sp)
+
+    	# %353 = "riscv_ssa.li"() <{"immediate" = 2 : i32}> : () -> !riscv_ssa.re
+	li t0, 2
+	sw t0, 852(sp)
+
+    	# %354 = "riscv_ssa.div"(%352, %353) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 848(sp)
+	lw t2, 852(sp)
+	div t0, t1, t2
+	sw t0, 856(sp)
+
+    	# "riscv_ssa.sw"(%354, %7) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 856(sp)
+	lw t2, 28(sp)
+	sw t1, 0(t2)
+
+    	# %355 = "riscv_ssa.lw"(%7) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 28(sp)
+	lw t0, 0(t1)
+	sw t0, 860(sp)
+
+    	# %356 = "riscv_ssa.li"() <{"immediate" = 7 : i32}> : () -> !riscv_ssa.re
+	li t0, 7
+	sw t0, 864(sp)
+
+    	# %357 = "riscv_ssa.rem"(%355, %356) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 860(sp)
+	lw t2, 864(sp)
+	rem t0, t1, t2
+	sw t0, 868(sp)
+
+    	# "riscv_ssa.sw"(%357, %9) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 868(sp)
+	lw t2, 36(sp)
+	sw t1, 0(t2)
+
+    	# %358 = "riscv_ssa.lw"(%9) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 36(sp)
+	lw t0, 0(t1)
+	sw t0, 872(sp)
+
+    	# %359 = "riscv_ssa.li"() <{"immediate" = 2 : i32}> : () -> !riscv_ssa.re
+	li t0, 2
+	sw t0, 876(sp)
+
+    	# %360 = "riscv_ssa.mul"(%358, %359) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 872(sp)
+	lw t2, 876(sp)
+	mul t0, t1, t2
+	sw t0, 880(sp)
+
+    	# "riscv_ssa.sw"(%360, %11) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 880(sp)
+	lw t2, 44(sp)
+	sw t1, 0(t2)
+
+    	# %361 = "riscv_ssa.lw"(%11) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 44(sp)
+	lw t0, 0(t1)
+	sw t0, 884(sp)
+
+    	# %362 = "riscv_ssa.li"() <{"immediate" = 2 : i32}> : () -> !riscv_ssa.re
+	li t0, 2
+	sw t0, 888(sp)
+
+    	# %363 = "riscv_ssa.sub"(%361, %362) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 884(sp)
+	lw t2, 888(sp)
+	sub t0, t1, t2
+	sw t0, 892(sp)
+
+    	# "riscv_ssa.sw"(%363, %13) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 892(sp)
+	lw t2, 52(sp)
+	sw t1, 0(t2)
+
+    	# %364 = "riscv_ssa.lw"(%13) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 52(sp)
+	lw t0, 0(t1)
+	sw t0, 896(sp)
+
+    	# %365 = "riscv_ssa.li"() <{"immediate" = 2 : i32}> : () -> !riscv_ssa.re
+	li t0, 2
+	sw t0, 900(sp)
+
+    	# %366 = "riscv_ssa.mul"(%364, %365) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 896(sp)
+	lw t2, 900(sp)
+	mul t0, t1, t2
+	sw t0, 904(sp)
+
+    	# "riscv_ssa.sw"(%366, %15) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 904(sp)
+	lw t2, 60(sp)
+	sw t1, 0(t2)
+
+    	# %367 = "riscv_ssa.lw"(%15) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 60(sp)
+	lw t0, 0(t1)
+	sw t0, 908(sp)
+
+    	# %368 = "riscv_ssa.li"() <{"immediate" = 3 : i32}> : () -> !riscv_ssa.re
+	li t0, 3
+	sw t0, 912(sp)
+
+    	# %369 = "riscv_ssa.add"(%367, %368) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 908(sp)
+	lw t2, 912(sp)
+	add t0, t1, t2
+	sw t0, 916(sp)
+
+    	# "riscv_ssa.sw"(%369, %17) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 916(sp)
+	lw t2, 68(sp)
+	sw t1, 0(t2)
+
+    	# %370 = "riscv_ssa.lw"(%17) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 68(sp)
+	lw t0, 0(t1)
+	sw t0, 920(sp)
+
+    	# %371 = "riscv_ssa.li"() <{"immediate" = 4 : i32}> : () -> !riscv_ssa.re
+	li t0, 4
+	sw t0, 924(sp)
+
+    	# %372 = "riscv_ssa.div"(%370, %371) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 920(sp)
+	lw t2, 924(sp)
+	div t0, t1, t2
+	sw t0, 928(sp)
+
+    	# "riscv_ssa.sw"(%372, %19) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 928(sp)
+	lw t2, 76(sp)
+	sw t1, 0(t2)
+
+    	# %373 = "riscv_ssa.lw"(%19) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 76(sp)
+	lw t0, 0(t1)
+	sw t0, 932(sp)
+
+    	# %374 = "riscv_ssa.li"() <{"immediate" = 435 : i32}> : () -> !riscv_ssa.re
+	li t0, 435
+	sw t0, 936(sp)
+
+    	# %375 = "riscv_ssa.rem"(%373, %374) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 932(sp)
+	lw t2, 936(sp)
+	rem t0, t1, t2
+	sw t0, 940(sp)
+
+    	# "riscv_ssa.sw"(%375, %21) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 940(sp)
+	lw t2, 84(sp)
+	sw t1, 0(t2)
+
+    	# %376 = "riscv_ssa.lw"(%21) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 84(sp)
+	lw t0, 0(t1)
+	sw t0, 944(sp)
+
+    	# %377 = "riscv_ssa.li"() <{"immediate" = 4 : i32}> : () -> !riscv_ssa.re
+	li t0, 4
+	sw t0, 948(sp)
+
+    	# %378 = "riscv_ssa.add"(%376, %377) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 944(sp)
+	lw t2, 948(sp)
+	add t0, t1, t2
+	sw t0, 952(sp)
+
+    	# "riscv_ssa.sw"(%378, %23) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 952(sp)
+	lw t2, 92(sp)
+	sw t1, 0(t2)
+
+    	# %379 = "riscv_ssa.lw"(%23) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 92(sp)
+	lw t0, 0(t1)
+	sw t0, 956(sp)
+
+    	# %380 = "riscv_ssa.li"() <{"immediate" = 5 : i32}> : () -> !riscv_ssa.re
+	li t0, 5
+	sw t0, 960(sp)
+
+    	# %381 = "riscv_ssa.mul"(%379, %380) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 956(sp)
+	lw t2, 960(sp)
+	mul t0, t1, t2
+	sw t0, 964(sp)
+
+    	# "riscv_ssa.sw"(%381, %25) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 964(sp)
+	lw t2, 100(sp)
+	sw t1, 0(t2)
+
+    	# %382 = "riscv_ssa.lw"(%25) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 100(sp)
+	lw t0, 0(t1)
+	sw t0, 968(sp)
+
+    	# %383 = "riscv_ssa.li"() <{"immediate" = 2 : i32}> : () -> !riscv_ssa.re
+	li t0, 2
+	sw t0, 972(sp)
+
+    	# %384 = "riscv_ssa.div"(%382, %383) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 968(sp)
+	lw t2, 972(sp)
+	div t0, t1, t2
+	sw t0, 976(sp)
+
+    	# "riscv_ssa.sw"(%384, %27) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 976(sp)
+	lw t2, 108(sp)
+	sw t1, 0(t2)
+
+    	# %385 = "riscv_ssa.lw"(%27) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 108(sp)
+	lw t0, 0(t1)
+	sw t0, 980(sp)
+
+    	# %386 = "riscv_ssa.li"() <{"immediate" = 7 : i32}> : () -> !riscv_ssa.re
+	li t0, 7
+	sw t0, 984(sp)
+
+    	# %387 = "riscv_ssa.rem"(%385, %386) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 980(sp)
+	lw t2, 984(sp)
+	rem t0, t1, t2
+	sw t0, 988(sp)
+
+    	# "riscv_ssa.sw"(%387, %29) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 988(sp)
+	lw t2, 116(sp)
+	sw t1, 0(t2)
+
+    	# %388 = "riscv_ssa.lw"(%29) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 116(sp)
+	lw t0, 0(t1)
+	sw t0, 992(sp)
+
+    	# %389 = "riscv_ssa.li"() <{"immediate" = 2 : i32}> : () -> !riscv_ssa.re
+	li t0, 2
+	sw t0, 996(sp)
+
+    	# %390 = "riscv_ssa.mul"(%388, %389) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 992(sp)
+	lw t2, 996(sp)
+	mul t0, t1, t2
+	sw t0, 1000(sp)
+
+    	# "riscv_ssa.sw"(%390, %31) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1000(sp)
+	lw t2, 124(sp)
+	sw t1, 0(t2)
+
+    	# %391 = "riscv_ssa.lw"(%31) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 124(sp)
+	lw t0, 0(t1)
+	sw t0, 1004(sp)
+
+    	# %392 = "riscv_ssa.li"() <{"immediate" = 2 : i32}> : () -> !riscv_ssa.re
+	li t0, 2
+	sw t0, 1008(sp)
+
+    	# %393 = "riscv_ssa.sub"(%391, %392) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1004(sp)
+	lw t2, 1008(sp)
+	sub t0, t1, t2
+	sw t0, 1012(sp)
+
+    	# "riscv_ssa.sw"(%393, %33) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1012(sp)
+	lw t2, 132(sp)
+	sw t1, 0(t2)
+
+    	# %394 = "riscv_ssa.lw"(%33) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 132(sp)
+	lw t0, 0(t1)
+	sw t0, 1016(sp)
+
+    	# %395 = "riscv_ssa.li"() <{"immediate" = 2 : i32}> : () -> !riscv_ssa.re
+	li t0, 2
+	sw t0, 1020(sp)
+
+    	# %396 = "riscv_ssa.mul"(%394, %395) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1016(sp)
+	lw t2, 1020(sp)
+	mul t0, t1, t2
+	sw t0, 1024(sp)
+
+    	# "riscv_ssa.sw"(%396, %35) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1024(sp)
+	lw t2, 140(sp)
+	sw t1, 0(t2)
+
+    	# %397 = "riscv_ssa.lw"(%35) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 140(sp)
+	lw t0, 0(t1)
+	sw t0, 1028(sp)
+
+    	# %398 = "riscv_ssa.li"() <{"immediate" = 3 : i32}> : () -> !riscv_ssa.re
+	li t0, 3
+	sw t0, 1032(sp)
+
+    	# %399 = "riscv_ssa.add"(%397, %398) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1028(sp)
+	lw t2, 1032(sp)
+	add t0, t1, t2
+	sw t0, 1036(sp)
+
+    	# "riscv_ssa.sw"(%399, %37) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1036(sp)
+	lw t2, 148(sp)
+	sw t1, 0(t2)
+
+    	# %400 = "riscv_ssa.lw"(%37) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 148(sp)
+	lw t0, 0(t1)
+	sw t0, 1040(sp)
+
+    	# %401 = "riscv_ssa.li"() <{"immediate" = 4 : i32}> : () -> !riscv_ssa.re
+	li t0, 4
+	sw t0, 1044(sp)
+
+    	# %402 = "riscv_ssa.div"(%400, %401) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1040(sp)
+	lw t2, 1044(sp)
+	div t0, t1, t2
+	sw t0, 1048(sp)
+
+    	# "riscv_ssa.sw"(%402, %39) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1048(sp)
+	lw t2, 156(sp)
+	sw t1, 0(t2)
+
+    	# %403 = "riscv_ssa.lw"(%39) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 156(sp)
+	lw t0, 0(t1)
+	sw t0, 1052(sp)
+
+    	# %404 = "riscv_ssa.li"() <{"immediate" = 435 : i32}> : () -> !riscv_ssa.re
+	li t0, 435
+	sw t0, 1056(sp)
+
+    	# %405 = "riscv_ssa.rem"(%403, %404) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1052(sp)
+	lw t2, 1056(sp)
+	rem t0, t1, t2
+	sw t0, 1060(sp)
+
+    	# "riscv_ssa.sw"(%405, %41) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1060(sp)
+	lw t2, 164(sp)
+	sw t1, 0(t2)
+
+    	# %406 = "riscv_ssa.lw"(%41) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 164(sp)
+	lw t0, 0(t1)
+	sw t0, 1064(sp)
+
+    	# %407 = "riscv_ssa.li"() <{"immediate" = 4 : i32}> : () -> !riscv_ssa.re
+	li t0, 4
+	sw t0, 1068(sp)
+
+    	# %408 = "riscv_ssa.add"(%406, %407) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1064(sp)
+	lw t2, 1068(sp)
+	add t0, t1, t2
+	sw t0, 1072(sp)
+
+    	# "riscv_ssa.sw"(%408, %43) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1072(sp)
+	lw t2, 172(sp)
+	sw t1, 0(t2)
+
+    	# %409 = "riscv_ssa.lw"(%43) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 172(sp)
+	lw t0, 0(t1)
+	sw t0, 1076(sp)
+
+    	# %410 = "riscv_ssa.li"() <{"immediate" = 5 : i32}> : () -> !riscv_ssa.re
+	li t0, 5
+	sw t0, 1080(sp)
+
+    	# %411 = "riscv_ssa.mul"(%409, %410) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1076(sp)
+	lw t2, 1080(sp)
+	mul t0, t1, t2
+	sw t0, 1084(sp)
+
+    	# "riscv_ssa.sw"(%411, %45) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1084(sp)
+	lw t2, 180(sp)
+	sw t1, 0(t2)
+
+    	# %412 = "riscv_ssa.lw"(%45) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 180(sp)
+	lw t0, 0(t1)
+	sw t0, 1088(sp)
+
+    	# %413 = "riscv_ssa.li"() <{"immediate" = 2 : i32}> : () -> !riscv_ssa.re
+	li t0, 2
+	sw t0, 1092(sp)
+
+    	# %414 = "riscv_ssa.div"(%412, %413) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1088(sp)
+	lw t2, 1092(sp)
+	div t0, t1, t2
+	sw t0, 1096(sp)
+
+    	# "riscv_ssa.sw"(%414, %47) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1096(sp)
+	lw t2, 188(sp)
+	sw t1, 0(t2)
+
+    	# %415 = "riscv_ssa.lw"(%47) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 188(sp)
+	lw t0, 0(t1)
+	sw t0, 1100(sp)
+
+    	# %416 = "riscv_ssa.li"() <{"immediate" = 7 : i32}> : () -> !riscv_ssa.re
+	li t0, 7
+	sw t0, 1104(sp)
+
+    	# %417 = "riscv_ssa.rem"(%415, %416) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1100(sp)
+	lw t2, 1104(sp)
+	rem t0, t1, t2
+	sw t0, 1108(sp)
+
+    	# "riscv_ssa.sw"(%417, %49) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1108(sp)
+	lw t2, 196(sp)
+	sw t1, 0(t2)
+
+    	# %418 = "riscv_ssa.lw"(%49) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 196(sp)
+	lw t0, 0(t1)
+	sw t0, 1112(sp)
+
+    	# %419 = "riscv_ssa.li"() <{"immediate" = 2 : i32}> : () -> !riscv_ssa.re
+	li t0, 2
+	sw t0, 1116(sp)
+
+    	# %420 = "riscv_ssa.mul"(%418, %419) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1112(sp)
+	lw t2, 1116(sp)
+	mul t0, t1, t2
+	sw t0, 1120(sp)
+
+    	# "riscv_ssa.sw"(%420, %51) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1120(sp)
+	lw t2, 204(sp)
+	sw t1, 0(t2)
+
+    	# %421 = "riscv_ssa.lw"(%51) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 204(sp)
+	lw t0, 0(t1)
+	sw t0, 1124(sp)
+
+    	# %422 = "riscv_ssa.li"() <{"immediate" = 2 : i32}> : () -> !riscv_ssa.re
+	li t0, 2
+	sw t0, 1128(sp)
+
+    	# %423 = "riscv_ssa.sub"(%421, %422) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1124(sp)
+	lw t2, 1128(sp)
+	sub t0, t1, t2
+	sw t0, 1132(sp)
+
+    	# "riscv_ssa.sw"(%423, %53) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1132(sp)
+	lw t2, 212(sp)
+	sw t1, 0(t2)
+
+    	# %424 = "riscv_ssa.lw"(%53) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 212(sp)
+	lw t0, 0(t1)
+	sw t0, 1136(sp)
+
+    	# %425 = "riscv_ssa.li"() <{"immediate" = 2 : i32}> : () -> !riscv_ssa.re
+	li t0, 2
+	sw t0, 1140(sp)
+
+    	# %426 = "riscv_ssa.mul"(%424, %425) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1136(sp)
+	lw t2, 1140(sp)
+	mul t0, t1, t2
+	sw t0, 1144(sp)
+
+    	# "riscv_ssa.sw"(%426, %55) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1144(sp)
+	lw t2, 220(sp)
+	sw t1, 0(t2)
+
+    	# %427 = "riscv_ssa.lw"(%55) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 220(sp)
+	lw t0, 0(t1)
+	sw t0, 1148(sp)
+
+    	# %428 = "riscv_ssa.li"() <{"immediate" = 3 : i32}> : () -> !riscv_ssa.re
+	li t0, 3
+	sw t0, 1152(sp)
+
+    	# %429 = "riscv_ssa.add"(%427, %428) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1148(sp)
+	lw t2, 1152(sp)
+	add t0, t1, t2
+	sw t0, 1156(sp)
+
+    	# "riscv_ssa.sw"(%429, %57) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1156(sp)
+	lw t2, 228(sp)
+	sw t1, 0(t2)
+
+    	# %430 = "riscv_ssa.lw"(%57) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 228(sp)
+	lw t0, 0(t1)
+	sw t0, 1160(sp)
+
+    	# %431 = "riscv_ssa.li"() <{"immediate" = 4 : i32}> : () -> !riscv_ssa.re
+	li t0, 4
+	sw t0, 1164(sp)
+
+    	# %432 = "riscv_ssa.div"(%430, %431) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1160(sp)
+	lw t2, 1164(sp)
+	div t0, t1, t2
+	sw t0, 1168(sp)
+
+    	# "riscv_ssa.sw"(%432, %59) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1168(sp)
+	lw t2, 236(sp)
+	sw t1, 0(t2)
+
+    	# %433 = "riscv_ssa.lw"(%59) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 236(sp)
+	lw t0, 0(t1)
+	sw t0, 1172(sp)
+
+    	# %434 = "riscv_ssa.li"() <{"immediate" = 435 : i32}> : () -> !riscv_ssa.re
+	li t0, 435
+	sw t0, 1176(sp)
+
+    	# %435 = "riscv_ssa.rem"(%433, %434) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1172(sp)
+	lw t2, 1176(sp)
+	rem t0, t1, t2
+	sw t0, 1180(sp)
+
+    	# "riscv_ssa.sw"(%435, %61) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1180(sp)
+	lw t2, 244(sp)
+	sw t1, 0(t2)
+
+    	# %436 = "riscv_ssa.lw"(%61) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 244(sp)
+	lw t0, 0(t1)
+	sw t0, 1184(sp)
+
+    	# %437 = "riscv_ssa.li"() <{"immediate" = 4 : i32}> : () -> !riscv_ssa.re
+	li t0, 4
+	sw t0, 1188(sp)
+
+    	# %438 = "riscv_ssa.add"(%436, %437) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1184(sp)
+	lw t2, 1188(sp)
+	add t0, t1, t2
+	sw t0, 1192(sp)
+
+    	# "riscv_ssa.sw"(%438, %63) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1192(sp)
+	lw t2, 252(sp)
+	sw t1, 0(t2)
+
+    	# %439 = "riscv_ssa.lw"(%63) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 252(sp)
+	lw t0, 0(t1)
+	sw t0, 1196(sp)
+
+    	# %440 = "riscv_ssa.li"() <{"immediate" = 5 : i32}> : () -> !riscv_ssa.re
+	li t0, 5
+	sw t0, 1200(sp)
+
+    	# %441 = "riscv_ssa.mul"(%439, %440) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1196(sp)
+	lw t2, 1200(sp)
+	mul t0, t1, t2
+	sw t0, 1204(sp)
+
+    	# "riscv_ssa.sw"(%441, %65) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1204(sp)
+	lw t2, 260(sp)
+	sw t1, 0(t2)
+
+    	# %442 = "riscv_ssa.lw"(%65) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 260(sp)
+	lw t0, 0(t1)
+	sw t0, 1208(sp)
+
+    	# %443 = "riscv_ssa.li"() <{"immediate" = 2 : i32}> : () -> !riscv_ssa.re
+	li t0, 2
+	sw t0, 1212(sp)
+
+    	# %444 = "riscv_ssa.div"(%442, %443) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1208(sp)
+	lw t2, 1212(sp)
+	div t0, t1, t2
+	sw t0, 1216(sp)
+
+    	# "riscv_ssa.sw"(%444, %67) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1216(sp)
+	lw t2, 268(sp)
+	sw t1, 0(t2)
+
+    	# %445 = "riscv_ssa.lw"(%67) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 268(sp)
+	lw t0, 0(t1)
+	sw t0, 1220(sp)
+
+    	# %446 = "riscv_ssa.li"() <{"immediate" = 7 : i32}> : () -> !riscv_ssa.re
+	li t0, 7
+	sw t0, 1224(sp)
+
+    	# %447 = "riscv_ssa.rem"(%445, %446) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1220(sp)
+	lw t2, 1224(sp)
+	rem t0, t1, t2
+	sw t0, 1228(sp)
+
+    	# "riscv_ssa.sw"(%447, %69) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1228(sp)
+	lw t2, 276(sp)
+	sw t1, 0(t2)
+
+    	# %448 = "riscv_ssa.lw"(%69) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 276(sp)
+	lw t0, 0(t1)
+	sw t0, 1232(sp)
+
+    	# %449 = "riscv_ssa.li"() <{"immediate" = 2 : i32}> : () -> !riscv_ssa.re
+	li t0, 2
+	sw t0, 1236(sp)
+
+    	# %450 = "riscv_ssa.mul"(%448, %449) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1232(sp)
+	lw t2, 1236(sp)
+	mul t0, t1, t2
+	sw t0, 1240(sp)
+
+    	# "riscv_ssa.sw"(%450, %71) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1240(sp)
+	lw t2, 284(sp)
+	sw t1, 0(t2)
+
+    	# %451 = "riscv_ssa.lw"(%71) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 284(sp)
+	lw t0, 0(t1)
+	sw t0, 1244(sp)
+
+    	# %452 = "riscv_ssa.li"() <{"immediate" = 2 : i32}> : () -> !riscv_ssa.re
+	li t0, 2
+	sw t0, 1248(sp)
+
+    	# %453 = "riscv_ssa.sub"(%451, %452) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1244(sp)
+	lw t2, 1248(sp)
+	sub t0, t1, t2
+	sw t0, 1252(sp)
+
+    	# "riscv_ssa.sw"(%453, %73) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1252(sp)
+	lw t2, 292(sp)
+	sw t1, 0(t2)
+
+    	# %454 = "riscv_ssa.lw"(%73) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 292(sp)
+	lw t0, 0(t1)
+	sw t0, 1256(sp)
+
+    	# %455 = "riscv_ssa.li"() <{"immediate" = 2 : i32}> : () -> !riscv_ssa.re
+	li t0, 2
+	sw t0, 1260(sp)
+
+    	# %456 = "riscv_ssa.mul"(%454, %455) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1256(sp)
+	lw t2, 1260(sp)
+	mul t0, t1, t2
+	sw t0, 1264(sp)
+
+    	# "riscv_ssa.sw"(%456, %75) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1264(sp)
+	lw t2, 300(sp)
+	sw t1, 0(t2)
+
+    	# %457 = "riscv_ssa.lw"(%75) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 300(sp)
+	lw t0, 0(t1)
+	sw t0, 1268(sp)
+
+    	# %458 = "riscv_ssa.li"() <{"immediate" = 3 : i32}> : () -> !riscv_ssa.re
+	li t0, 3
+	sw t0, 1272(sp)
+
+    	# %459 = "riscv_ssa.add"(%457, %458) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1268(sp)
+	lw t2, 1272(sp)
+	add t0, t1, t2
+	sw t0, 1276(sp)
+
+    	# "riscv_ssa.sw"(%459, %77) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1276(sp)
+	lw t2, 308(sp)
+	sw t1, 0(t2)
+
+    	# %460 = "riscv_ssa.lw"(%77) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 308(sp)
+	lw t0, 0(t1)
+	sw t0, 1280(sp)
+
+    	# %461 = "riscv_ssa.li"() <{"immediate" = 4 : i32}> : () -> !riscv_ssa.re
+	li t0, 4
+	sw t0, 1284(sp)
+
+    	# %462 = "riscv_ssa.div"(%460, %461) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1280(sp)
+	lw t2, 1284(sp)
+	div t0, t1, t2
+	sw t0, 1288(sp)
+
+    	# "riscv_ssa.sw"(%462, %79) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1288(sp)
+	lw t2, 316(sp)
+	sw t1, 0(t2)
+
+    	# %463 = "riscv_ssa.lw"(%79) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 316(sp)
+	lw t0, 0(t1)
+	sw t0, 1292(sp)
+
+    	# %464 = "riscv_ssa.li"() <{"immediate" = 435 : i32}> : () -> !riscv_ssa.re
+	li t0, 435
+	sw t0, 1296(sp)
+
+    	# %465 = "riscv_ssa.rem"(%463, %464) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1292(sp)
+	lw t2, 1296(sp)
+	rem t0, t1, t2
+	sw t0, 1300(sp)
+
+    	# "riscv_ssa.sw"(%465, %81) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1300(sp)
+	lw t2, 324(sp)
+	sw t1, 0(t2)
+
+    	# %466 = "riscv_ssa.lw"(%81) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 324(sp)
+	lw t0, 0(t1)
+	sw t0, 1304(sp)
+
+    	# %467 = "riscv_ssa.li"() <{"immediate" = 4 : i32}> : () -> !riscv_ssa.re
+	li t0, 4
+	sw t0, 1308(sp)
+
+    	# %468 = "riscv_ssa.add"(%466, %467) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1304(sp)
+	lw t2, 1308(sp)
+	add t0, t1, t2
+	sw t0, 1312(sp)
+
+    	# "riscv_ssa.sw"(%468, %83) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1312(sp)
+	lw t2, 332(sp)
+	sw t1, 0(t2)
+
+    	# %469 = "riscv_ssa.lw"(%83) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 332(sp)
+	lw t0, 0(t1)
+	sw t0, 1316(sp)
+
+    	# %470 = "riscv_ssa.li"() <{"immediate" = 5 : i32}> : () -> !riscv_ssa.re
+	li t0, 5
+	sw t0, 1320(sp)
+
+    	# %471 = "riscv_ssa.mul"(%469, %470) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1316(sp)
+	lw t2, 1320(sp)
+	mul t0, t1, t2
+	sw t0, 1324(sp)
+
+    	# "riscv_ssa.sw"(%471, %85) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1324(sp)
+	lw t2, 340(sp)
+	sw t1, 0(t2)
+
+    	# %472 = "riscv_ssa.lw"(%85) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 340(sp)
+	lw t0, 0(t1)
+	sw t0, 1328(sp)
+
+    	# %473 = "riscv_ssa.li"() <{"immediate" = 2 : i32}> : () -> !riscv_ssa.re
+	li t0, 2
+	sw t0, 1332(sp)
+
+    	# %474 = "riscv_ssa.div"(%472, %473) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1328(sp)
+	lw t2, 1332(sp)
+	div t0, t1, t2
+	sw t0, 1336(sp)
+
+    	# "riscv_ssa.sw"(%474, %87) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1336(sp)
+	lw t2, 348(sp)
+	sw t1, 0(t2)
+
+    	# %475 = "riscv_ssa.lw"(%87) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 348(sp)
+	lw t0, 0(t1)
+	sw t0, 1340(sp)
+
+    	# %476 = "riscv_ssa.li"() <{"immediate" = 7 : i32}> : () -> !riscv_ssa.re
+	li t0, 7
+	sw t0, 1344(sp)
+
+    	# %477 = "riscv_ssa.rem"(%475, %476) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1340(sp)
+	lw t2, 1344(sp)
+	rem t0, t1, t2
+	sw t0, 1348(sp)
+
+    	# "riscv_ssa.sw"(%477, %89) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1348(sp)
+	lw t2, 356(sp)
+	sw t1, 0(t2)
+
+    	# %478 = "riscv_ssa.lw"(%89) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 356(sp)
+	lw t0, 0(t1)
+	sw t0, 1352(sp)
+
+    	# %479 = "riscv_ssa.li"() <{"immediate" = 2 : i32}> : () -> !riscv_ssa.re
+	li t0, 2
+	sw t0, 1356(sp)
+
+    	# %480 = "riscv_ssa.mul"(%478, %479) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1352(sp)
+	lw t2, 1356(sp)
+	mul t0, t1, t2
+	sw t0, 1360(sp)
+
+    	# "riscv_ssa.sw"(%480, %91) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1360(sp)
+	lw t2, 364(sp)
+	sw t1, 0(t2)
+
+    	# %481 = "riscv_ssa.lw"(%91) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 364(sp)
+	lw t0, 0(t1)
+	sw t0, 1364(sp)
+
+    	# %482 = "riscv_ssa.li"() <{"immediate" = 2 : i32}> : () -> !riscv_ssa.re
+	li t0, 2
+	sw t0, 1368(sp)
+
+    	# %483 = "riscv_ssa.sub"(%481, %482) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1364(sp)
+	lw t2, 1368(sp)
+	sub t0, t1, t2
+	sw t0, 1372(sp)
+
+    	# "riscv_ssa.sw"(%483, %93) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1372(sp)
+	lw t2, 372(sp)
+	sw t1, 0(t2)
+
+    	# %484 = "riscv_ssa.lw"(%93) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 372(sp)
+	lw t0, 0(t1)
+	sw t0, 1376(sp)
+
+    	# %485 = "riscv_ssa.li"() <{"immediate" = 2 : i32}> : () -> !riscv_ssa.re
+	li t0, 2
+	sw t0, 1380(sp)
+
+    	# %486 = "riscv_ssa.mul"(%484, %485) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1376(sp)
+	lw t2, 1380(sp)
+	mul t0, t1, t2
+	sw t0, 1384(sp)
+
+    	# "riscv_ssa.sw"(%486, %95) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1384(sp)
+	lw t2, 380(sp)
+	sw t1, 0(t2)
+
+    	# %487 = "riscv_ssa.lw"(%95) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 380(sp)
+	lw t0, 0(t1)
+	sw t0, 1388(sp)
+
+    	# %488 = "riscv_ssa.li"() <{"immediate" = 3 : i32}> : () -> !riscv_ssa.re
+	li t0, 3
+	sw t0, 1392(sp)
+
+    	# %489 = "riscv_ssa.add"(%487, %488) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1388(sp)
+	lw t2, 1392(sp)
+	add t0, t1, t2
+	sw t0, 1396(sp)
+
+    	# "riscv_ssa.sw"(%489, %97) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1396(sp)
+	lw t2, 388(sp)
+	sw t1, 0(t2)
+
+    	# %490 = "riscv_ssa.lw"(%97) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 388(sp)
+	lw t0, 0(t1)
+	sw t0, 1400(sp)
+
+    	# %491 = "riscv_ssa.li"() <{"immediate" = 4 : i32}> : () -> !riscv_ssa.re
+	li t0, 4
+	sw t0, 1404(sp)
+
+    	# %492 = "riscv_ssa.div"(%490, %491) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1400(sp)
+	lw t2, 1404(sp)
+	div t0, t1, t2
+	sw t0, 1408(sp)
+
+    	# "riscv_ssa.sw"(%492, %99) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1408(sp)
+	lw t2, 396(sp)
+	sw t1, 0(t2)
+
+    	# %493 = "riscv_ssa.lw"(%99) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 396(sp)
+	lw t0, 0(t1)
+	sw t0, 1412(sp)
+
+    	# %494 = "riscv_ssa.li"() <{"immediate" = 435 : i32}> : () -> !riscv_ssa.re
+	li t0, 435
+	sw t0, 1416(sp)
+
+    	# %495 = "riscv_ssa.rem"(%493, %494) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1412(sp)
+	lw t2, 1416(sp)
+	rem t0, t1, t2
+	sw t0, 1420(sp)
+
+    	# "riscv_ssa.sw"(%495, %101) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1420(sp)
+	lw t2, 404(sp)
+	sw t1, 0(t2)
+
+    	# %496 = "riscv_ssa.lw"(%101) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 404(sp)
+	lw t0, 0(t1)
+	sw t0, 1424(sp)
+
+    	# %497 = "riscv_ssa.li"() <{"immediate" = 4 : i32}> : () -> !riscv_ssa.re
+	li t0, 4
+	sw t0, 1428(sp)
+
+    	# %498 = "riscv_ssa.add"(%496, %497) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1424(sp)
+	lw t2, 1428(sp)
+	add t0, t1, t2
+	sw t0, 1432(sp)
+
+    	# "riscv_ssa.sw"(%498, %103) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1432(sp)
+	lw t2, 412(sp)
+	sw t1, 0(t2)
+
+    	# %499 = "riscv_ssa.lw"(%103) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 412(sp)
+	lw t0, 0(t1)
+	sw t0, 1436(sp)
+
+    	# %500 = "riscv_ssa.li"() <{"immediate" = 5 : i32}> : () -> !riscv_ssa.re
+	li t0, 5
+	sw t0, 1440(sp)
+
+    	# %501 = "riscv_ssa.mul"(%499, %500) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1436(sp)
+	lw t2, 1440(sp)
+	mul t0, t1, t2
+	sw t0, 1444(sp)
+
+    	# "riscv_ssa.sw"(%501, %105) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1444(sp)
+	lw t2, 420(sp)
+	sw t1, 0(t2)
+
+    	# %502 = "riscv_ssa.lw"(%105) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 420(sp)
+	lw t0, 0(t1)
+	sw t0, 1448(sp)
+
+    	# %503 = "riscv_ssa.li"() <{"immediate" = 2 : i32}> : () -> !riscv_ssa.re
+	li t0, 2
+	sw t0, 1452(sp)
+
+    	# %504 = "riscv_ssa.div"(%502, %503) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1448(sp)
+	lw t2, 1452(sp)
+	div t0, t1, t2
+	sw t0, 1456(sp)
+
+    	# "riscv_ssa.sw"(%504, %107) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1456(sp)
+	lw t2, 428(sp)
+	sw t1, 0(t2)
+
+    	# %505 = "riscv_ssa.lw"(%107) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 428(sp)
+	lw t0, 0(t1)
+	sw t0, 1460(sp)
+
+    	# %506 = "riscv_ssa.li"() <{"immediate" = 7 : i32}> : () -> !riscv_ssa.re
+	li t0, 7
+	sw t0, 1464(sp)
+
+    	# %507 = "riscv_ssa.rem"(%505, %506) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1460(sp)
+	lw t2, 1464(sp)
+	rem t0, t1, t2
+	sw t0, 1468(sp)
+
+    	# "riscv_ssa.sw"(%507, %109) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1468(sp)
+	lw t2, 436(sp)
+	sw t1, 0(t2)
+
+    	# %508 = "riscv_ssa.lw"(%109) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 436(sp)
+	lw t0, 0(t1)
+	sw t0, 1472(sp)
+
+    	# %509 = "riscv_ssa.li"() <{"immediate" = 2 : i32}> : () -> !riscv_ssa.re
+	li t0, 2
+	sw t0, 1476(sp)
+
+    	# %510 = "riscv_ssa.mul"(%508, %509) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1472(sp)
+	lw t2, 1476(sp)
+	mul t0, t1, t2
+	sw t0, 1480(sp)
+
+    	# "riscv_ssa.sw"(%510, %111) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1480(sp)
+	lw t2, 444(sp)
+	sw t1, 0(t2)
+
+    	# %511 = "riscv_ssa.lw"(%111) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 444(sp)
+	lw t0, 0(t1)
+	sw t0, 1484(sp)
+
+    	# %512 = "riscv_ssa.li"() <{"immediate" = 2 : i32}> : () -> !riscv_ssa.re
+	li t0, 2
+	sw t0, 1488(sp)
+
+    	# %513 = "riscv_ssa.sub"(%511, %512) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1484(sp)
+	lw t2, 1488(sp)
+	sub t0, t1, t2
+	sw t0, 1492(sp)
+
+    	# "riscv_ssa.sw"(%513, %113) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1492(sp)
+	lw t2, 452(sp)
+	sw t1, 0(t2)
+
+    	# %514 = "riscv_ssa.lw"(%113) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 452(sp)
+	lw t0, 0(t1)
+	sw t0, 1496(sp)
+
+    	# %515 = "riscv_ssa.li"() <{"immediate" = 2 : i32}> : () -> !riscv_ssa.re
+	li t0, 2
+	sw t0, 1500(sp)
+
+    	# %516 = "riscv_ssa.mul"(%514, %515) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1496(sp)
+	lw t2, 1500(sp)
+	mul t0, t1, t2
+	sw t0, 1504(sp)
+
+    	# "riscv_ssa.sw"(%516, %115) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1504(sp)
+	lw t2, 460(sp)
+	sw t1, 0(t2)
+
+    	# %517 = "riscv_ssa.lw"(%115) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 460(sp)
+	lw t0, 0(t1)
+	sw t0, 1508(sp)
+
+    	# %518 = "riscv_ssa.li"() <{"immediate" = 3 : i32}> : () -> !riscv_ssa.re
+	li t0, 3
+	sw t0, 1512(sp)
+
+    	# %519 = "riscv_ssa.add"(%517, %518) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1508(sp)
+	lw t2, 1512(sp)
+	add t0, t1, t2
+	sw t0, 1516(sp)
+
+    	# "riscv_ssa.sw"(%519, %117) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1516(sp)
+	lw t2, 468(sp)
+	sw t1, 0(t2)
+
+    	# %520 = "riscv_ssa.lw"(%117) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 468(sp)
+	lw t0, 0(t1)
+	sw t0, 1520(sp)
+
+    	# %521 = "riscv_ssa.li"() <{"immediate" = 4 : i32}> : () -> !riscv_ssa.re
+	li t0, 4
+	sw t0, 1524(sp)
+
+    	# %522 = "riscv_ssa.div"(%520, %521) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1520(sp)
+	lw t2, 1524(sp)
+	div t0, t1, t2
+	sw t0, 1528(sp)
+
+    	# "riscv_ssa.sw"(%522, %119) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1528(sp)
+	lw t2, 476(sp)
+	sw t1, 0(t2)
+
+    	# %523 = "riscv_ssa.lw"(%119) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 476(sp)
+	lw t0, 0(t1)
+	sw t0, 1532(sp)
+
+    	# %524 = "riscv_ssa.li"() <{"immediate" = 435 : i32}> : () -> !riscv_ssa.re
+	li t0, 435
+	sw t0, 1536(sp)
+
+    	# %525 = "riscv_ssa.rem"(%523, %524) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1532(sp)
+	lw t2, 1536(sp)
+	rem t0, t1, t2
+	sw t0, 1540(sp)
+
+    	# "riscv_ssa.sw"(%525, %121) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1540(sp)
+	lw t2, 484(sp)
+	sw t1, 0(t2)
+
+    	# %526 = "riscv_ssa.lw"(%121) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 484(sp)
+	lw t0, 0(t1)
+	sw t0, 1544(sp)
+
+    	# %527 = "riscv_ssa.li"() <{"immediate" = 4 : i32}> : () -> !riscv_ssa.re
+	li t0, 4
+	sw t0, 1548(sp)
+
+    	# %528 = "riscv_ssa.add"(%526, %527) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1544(sp)
+	lw t2, 1548(sp)
+	add t0, t1, t2
+	sw t0, 1552(sp)
+
+    	# "riscv_ssa.sw"(%528, %123) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1552(sp)
+	lw t2, 492(sp)
+	sw t1, 0(t2)
+
+    	# %529 = "riscv_ssa.lw"(%123) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 492(sp)
+	lw t0, 0(t1)
+	sw t0, 1556(sp)
+
+    	# %530 = "riscv_ssa.li"() <{"immediate" = 5 : i32}> : () -> !riscv_ssa.re
+	li t0, 5
+	sw t0, 1560(sp)
+
+    	# %531 = "riscv_ssa.mul"(%529, %530) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1556(sp)
+	lw t2, 1560(sp)
+	mul t0, t1, t2
+	sw t0, 1564(sp)
+
+    	# "riscv_ssa.sw"(%531, %125) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1564(sp)
+	lw t2, 500(sp)
+	sw t1, 0(t2)
+
+    	# %532 = "riscv_ssa.lw"(%125) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 500(sp)
+	lw t0, 0(t1)
+	sw t0, 1568(sp)
+
+    	# %533 = "riscv_ssa.li"() <{"immediate" = 2 : i32}> : () -> !riscv_ssa.re
+	li t0, 2
+	sw t0, 1572(sp)
+
+    	# %534 = "riscv_ssa.div"(%532, %533) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1568(sp)
+	lw t2, 1572(sp)
+	div t0, t1, t2
+	sw t0, 1576(sp)
+
+    	# "riscv_ssa.sw"(%534, %127) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1576(sp)
+	lw t2, 508(sp)
+	sw t1, 0(t2)
+
+    	# %535 = "riscv_ssa.lw"(%127) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 508(sp)
+	lw t0, 0(t1)
+	sw t0, 1580(sp)
+
+    	# %536 = "riscv_ssa.li"() <{"immediate" = 7 : i32}> : () -> !riscv_ssa.re
+	li t0, 7
+	sw t0, 1584(sp)
+
+    	# %537 = "riscv_ssa.rem"(%535, %536) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1580(sp)
+	lw t2, 1584(sp)
+	rem t0, t1, t2
+	sw t0, 1588(sp)
+
+    	# "riscv_ssa.sw"(%537, %129) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1588(sp)
+	lw t2, 516(sp)
+	sw t1, 0(t2)
+
+    	# %538 = "riscv_ssa.lw"(%129) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 516(sp)
+	lw t0, 0(t1)
+	sw t0, 1592(sp)
+
+    	# %539 = "riscv_ssa.li"() <{"immediate" = 2 : i32}> : () -> !riscv_ssa.re
+	li t0, 2
+	sw t0, 1596(sp)
+
+    	# %540 = "riscv_ssa.mul"(%538, %539) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1592(sp)
+	lw t2, 1596(sp)
+	mul t0, t1, t2
+	sw t0, 1600(sp)
+
+    	# "riscv_ssa.sw"(%540, %131) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1600(sp)
+	lw t2, 524(sp)
+	sw t1, 0(t2)
+
+    	# %541 = "riscv_ssa.lw"(%131) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 524(sp)
+	lw t0, 0(t1)
+	sw t0, 1604(sp)
+
+    	# %542 = "riscv_ssa.li"() <{"immediate" = 2 : i32}> : () -> !riscv_ssa.re
+	li t0, 2
+	sw t0, 1608(sp)
+
+    	# %543 = "riscv_ssa.sub"(%541, %542) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1604(sp)
+	lw t2, 1608(sp)
+	sub t0, t1, t2
+	sw t0, 1612(sp)
+
+    	# "riscv_ssa.sw"(%543, %133) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1612(sp)
+	lw t2, 532(sp)
+	sw t1, 0(t2)
+
+    	# %544 = "riscv_ssa.lw"(%133) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 532(sp)
+	lw t0, 0(t1)
+	sw t0, 1616(sp)
+
+    	# %545 = "riscv_ssa.li"() <{"immediate" = 2 : i32}> : () -> !riscv_ssa.re
+	li t0, 2
+	sw t0, 1620(sp)
+
+    	# %546 = "riscv_ssa.mul"(%544, %545) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1616(sp)
+	lw t2, 1620(sp)
+	mul t0, t1, t2
+	sw t0, 1624(sp)
+
+    	# "riscv_ssa.sw"(%546, %135) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1624(sp)
+	lw t2, 540(sp)
+	sw t1, 0(t2)
+
+    	# %547 = "riscv_ssa.lw"(%135) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 540(sp)
+	lw t0, 0(t1)
+	sw t0, 1628(sp)
+
+    	# %548 = "riscv_ssa.li"() <{"immediate" = 3 : i32}> : () -> !riscv_ssa.re
+	li t0, 3
+	sw t0, 1632(sp)
+
+    	# %549 = "riscv_ssa.add"(%547, %548) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1628(sp)
+	lw t2, 1632(sp)
+	add t0, t1, t2
+	sw t0, 1636(sp)
+
+    	# "riscv_ssa.sw"(%549, %137) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1636(sp)
+	lw t2, 548(sp)
+	sw t1, 0(t2)
+
+    	# %550 = "riscv_ssa.lw"(%137) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 548(sp)
+	lw t0, 0(t1)
+	sw t0, 1640(sp)
+
+    	# %551 = "riscv_ssa.li"() <{"immediate" = 4 : i32}> : () -> !riscv_ssa.re
+	li t0, 4
+	sw t0, 1644(sp)
+
+    	# %552 = "riscv_ssa.div"(%550, %551) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1640(sp)
+	lw t2, 1644(sp)
+	div t0, t1, t2
+	sw t0, 1648(sp)
+
+    	# "riscv_ssa.sw"(%552, %139) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1648(sp)
+	lw t2, 556(sp)
+	sw t1, 0(t2)
+
+    	# %553 = "riscv_ssa.lw"(%139) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 556(sp)
+	lw t0, 0(t1)
+	sw t0, 1652(sp)
+
+    	# %554 = "riscv_ssa.li"() <{"immediate" = 435 : i32}> : () -> !riscv_ssa.re
+	li t0, 435
+	sw t0, 1656(sp)
+
+    	# %555 = "riscv_ssa.rem"(%553, %554) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1652(sp)
+	lw t2, 1656(sp)
+	rem t0, t1, t2
+	sw t0, 1660(sp)
+
+    	# "riscv_ssa.sw"(%555, %141) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1660(sp)
+	lw t2, 564(sp)
+	sw t1, 0(t2)
+
+    	# %556 = "riscv_ssa.lw"(%141) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 564(sp)
+	lw t0, 0(t1)
+	sw t0, 1664(sp)
+
+    	# %557 = "riscv_ssa.li"() <{"immediate" = 4 : i32}> : () -> !riscv_ssa.re
+	li t0, 4
+	sw t0, 1668(sp)
+
+    	# %558 = "riscv_ssa.add"(%556, %557) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1664(sp)
+	lw t2, 1668(sp)
+	add t0, t1, t2
+	sw t0, 1672(sp)
+
+    	# "riscv_ssa.sw"(%558, %143) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1672(sp)
+	lw t2, 572(sp)
+	sw t1, 0(t2)
+
+    	# %559 = "riscv_ssa.lw"(%143) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 572(sp)
+	lw t0, 0(t1)
+	sw t0, 1676(sp)
+
+    	# %560 = "riscv_ssa.li"() <{"immediate" = 5 : i32}> : () -> !riscv_ssa.re
+	li t0, 5
+	sw t0, 1680(sp)
+
+    	# %561 = "riscv_ssa.mul"(%559, %560) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1676(sp)
+	lw t2, 1680(sp)
+	mul t0, t1, t2
+	sw t0, 1684(sp)
+
+    	# "riscv_ssa.sw"(%561, %145) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1684(sp)
+	lw t2, 580(sp)
+	sw t1, 0(t2)
+
+    	# %562 = "riscv_ssa.lw"(%145) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 580(sp)
+	lw t0, 0(t1)
+	sw t0, 1688(sp)
+
+    	# %563 = "riscv_ssa.li"() <{"immediate" = 2 : i32}> : () -> !riscv_ssa.re
+	li t0, 2
+	sw t0, 1692(sp)
+
+    	# %564 = "riscv_ssa.div"(%562, %563) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1688(sp)
+	lw t2, 1692(sp)
+	div t0, t1, t2
+	sw t0, 1696(sp)
+
+    	# "riscv_ssa.sw"(%564, %147) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1696(sp)
+	lw t2, 588(sp)
+	sw t1, 0(t2)
+
+    	# %565 = "riscv_ssa.lw"(%147) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 588(sp)
+	lw t0, 0(t1)
+	sw t0, 1700(sp)
+
+    	# %566 = "riscv_ssa.li"() <{"immediate" = 7 : i32}> : () -> !riscv_ssa.re
+	li t0, 7
+	sw t0, 1704(sp)
+
+    	# %567 = "riscv_ssa.rem"(%565, %566) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1700(sp)
+	lw t2, 1704(sp)
+	rem t0, t1, t2
+	sw t0, 1708(sp)
+
+    	# "riscv_ssa.sw"(%567, %149) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1708(sp)
+	lw t2, 596(sp)
+	sw t1, 0(t2)
+
+    	# %568 = "riscv_ssa.lw"(%149) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 596(sp)
+	lw t0, 0(t1)
+	sw t0, 1712(sp)
+
+    	# %569 = "riscv_ssa.li"() <{"immediate" = 2 : i32}> : () -> !riscv_ssa.re
+	li t0, 2
+	sw t0, 1716(sp)
+
+    	# %570 = "riscv_ssa.mul"(%568, %569) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1712(sp)
+	lw t2, 1716(sp)
+	mul t0, t1, t2
+	sw t0, 1720(sp)
+
+    	# "riscv_ssa.sw"(%570, %151) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1720(sp)
+	lw t2, 604(sp)
+	sw t1, 0(t2)
+
+    	# %571 = "riscv_ssa.lw"(%151) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 604(sp)
+	lw t0, 0(t1)
+	sw t0, 1724(sp)
+
+    	# %572 = "riscv_ssa.li"() <{"immediate" = 2 : i32}> : () -> !riscv_ssa.re
+	li t0, 2
+	sw t0, 1728(sp)
+
+    	# %573 = "riscv_ssa.sub"(%571, %572) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1724(sp)
+	lw t2, 1728(sp)
+	sub t0, t1, t2
+	sw t0, 1732(sp)
+
+    	# "riscv_ssa.sw"(%573, %153) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1732(sp)
+	lw t2, 612(sp)
+	sw t1, 0(t2)
+
+    	# %574 = "riscv_ssa.lw"(%153) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 612(sp)
+	lw t0, 0(t1)
+	sw t0, 1736(sp)
+
+    	# %575 = "riscv_ssa.li"() <{"immediate" = 2 : i32}> : () -> !riscv_ssa.re
+	li t0, 2
+	sw t0, 1740(sp)
+
+    	# %576 = "riscv_ssa.mul"(%574, %575) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1736(sp)
+	lw t2, 1740(sp)
+	mul t0, t1, t2
+	sw t0, 1744(sp)
+
+    	# "riscv_ssa.sw"(%576, %155) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1744(sp)
+	lw t2, 620(sp)
+	sw t1, 0(t2)
+
+    	# %577 = "riscv_ssa.lw"(%155) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 620(sp)
+	lw t0, 0(t1)
+	sw t0, 1748(sp)
+
+    	# %578 = "riscv_ssa.li"() <{"immediate" = 3 : i32}> : () -> !riscv_ssa.re
+	li t0, 3
+	sw t0, 1752(sp)
+
+    	# %579 = "riscv_ssa.add"(%577, %578) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1748(sp)
+	lw t2, 1752(sp)
+	add t0, t1, t2
+	sw t0, 1756(sp)
+
+    	# "riscv_ssa.sw"(%579, %157) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1756(sp)
+	lw t2, 628(sp)
+	sw t1, 0(t2)
+
+    	# %580 = "riscv_ssa.lw"(%157) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 628(sp)
+	lw t0, 0(t1)
+	sw t0, 1760(sp)
+
+    	# %581 = "riscv_ssa.li"() <{"immediate" = 4 : i32}> : () -> !riscv_ssa.re
+	li t0, 4
+	sw t0, 1764(sp)
+
+    	# %582 = "riscv_ssa.div"(%580, %581) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1760(sp)
+	lw t2, 1764(sp)
+	div t0, t1, t2
+	sw t0, 1768(sp)
+
+    	# "riscv_ssa.sw"(%582, %159) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1768(sp)
+	lw t2, 636(sp)
+	sw t1, 0(t2)
+
+    	# %583 = "riscv_ssa.lw"(%159) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 636(sp)
+	lw t0, 0(t1)
+	sw t0, 1772(sp)
+
+    	# %584 = "riscv_ssa.li"() <{"immediate" = 435 : i32}> : () -> !riscv_ssa.re
+	li t0, 435
+	sw t0, 1776(sp)
+
+    	# %585 = "riscv_ssa.rem"(%583, %584) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1772(sp)
+	lw t2, 1776(sp)
+	rem t0, t1, t2
+	sw t0, 1780(sp)
+
+    	# "riscv_ssa.sw"(%585, %161) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1780(sp)
+	lw t2, 644(sp)
+	sw t1, 0(t2)
+
+    	# %586 = "riscv_ssa.lw"(%161) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 644(sp)
+	lw t0, 0(t1)
+	sw t0, 1784(sp)
+
+    	# %587 = "riscv_ssa.li"() <{"immediate" = 4 : i32}> : () -> !riscv_ssa.re
+	li t0, 4
+	sw t0, 1788(sp)
+
+    	# %588 = "riscv_ssa.add"(%586, %587) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1784(sp)
+	lw t2, 1788(sp)
+	add t0, t1, t2
+	sw t0, 1792(sp)
+
+    	# "riscv_ssa.sw"(%588, %163) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1792(sp)
+	lw t2, 652(sp)
+	sw t1, 0(t2)
+
+    	# %589 = "riscv_ssa.lw"(%163) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 652(sp)
+	lw t0, 0(t1)
+	sw t0, 1796(sp)
+
+    	# %590 = "riscv_ssa.li"() <{"immediate" = 5 : i32}> : () -> !riscv_ssa.re
+	li t0, 5
+	sw t0, 1800(sp)
+
+    	# %591 = "riscv_ssa.mul"(%589, %590) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1796(sp)
+	lw t2, 1800(sp)
+	mul t0, t1, t2
+	sw t0, 1804(sp)
+
+    	# "riscv_ssa.sw"(%591, %165) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1804(sp)
+	lw t2, 660(sp)
+	sw t1, 0(t2)
+
+    	# %592 = "riscv_ssa.lw"(%165) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 660(sp)
+	lw t0, 0(t1)
+	sw t0, 1808(sp)
+
+    	# %593 = "riscv_ssa.li"() <{"immediate" = 2 : i32}> : () -> !riscv_ssa.re
+	li t0, 2
+	sw t0, 1812(sp)
+
+    	# %594 = "riscv_ssa.div"(%592, %593) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1808(sp)
+	lw t2, 1812(sp)
+	div t0, t1, t2
+	sw t0, 1816(sp)
+
+    	# "riscv_ssa.sw"(%594, %167) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1816(sp)
+	lw t2, 668(sp)
+	sw t1, 0(t2)
+
+    	# %595 = "riscv_ssa.lw"(%167) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 668(sp)
+	lw t0, 0(t1)
+	sw t0, 1820(sp)
+
+    	# %596 = "riscv_ssa.li"() <{"immediate" = 7 : i32}> : () -> !riscv_ssa.re
+	li t0, 7
+	sw t0, 1824(sp)
+
+    	# %597 = "riscv_ssa.rem"(%595, %596) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1820(sp)
+	lw t2, 1824(sp)
+	rem t0, t1, t2
+	sw t0, 1828(sp)
+
+    	# "riscv_ssa.sw"(%597, %169) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1828(sp)
+	lw t2, 676(sp)
+	sw t1, 0(t2)
+
+    	# %598 = "riscv_ssa.lw"(%169) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 676(sp)
+	lw t0, 0(t1)
+	sw t0, 1832(sp)
+
+    	# %599 = "riscv_ssa.li"() <{"immediate" = 2 : i32}> : () -> !riscv_ssa.re
+	li t0, 2
+	sw t0, 1836(sp)
+
+    	# %600 = "riscv_ssa.mul"(%598, %599) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1832(sp)
+	lw t2, 1836(sp)
+	mul t0, t1, t2
+	sw t0, 1840(sp)
+
+    	# "riscv_ssa.sw"(%600, %171) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1840(sp)
+	lw t2, 684(sp)
+	sw t1, 0(t2)
+
+    	# %601 = "riscv_ssa.lw"(%171) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 684(sp)
+	lw t0, 0(t1)
+	sw t0, 1844(sp)
+
+    	# %602 = "riscv_ssa.li"() <{"immediate" = 2 : i32}> : () -> !riscv_ssa.re
+	li t0, 2
+	sw t0, 1848(sp)
+
+    	# %603 = "riscv_ssa.sub"(%601, %602) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1844(sp)
+	lw t2, 1848(sp)
+	sub t0, t1, t2
+	sw t0, 1852(sp)
+
+    	# "riscv_ssa.sw"(%603, %173) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1852(sp)
+	lw t2, 692(sp)
+	sw t1, 0(t2)
+
+    	# %604 = "riscv_ssa.lw"(%173) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 692(sp)
+	lw t0, 0(t1)
+	sw t0, 1856(sp)
+
+    	# %605 = "riscv_ssa.li"() <{"immediate" = 2 : i32}> : () -> !riscv_ssa.re
+	li t0, 2
+	sw t0, 1860(sp)
+
+    	# %606 = "riscv_ssa.mul"(%604, %605) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1856(sp)
+	lw t2, 1860(sp)
+	mul t0, t1, t2
+	sw t0, 1864(sp)
+
+    	# "riscv_ssa.sw"(%606, %175) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1864(sp)
+	lw t2, 700(sp)
+	sw t1, 0(t2)
+
+    	# %607 = "riscv_ssa.lw"(%175) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 700(sp)
+	lw t0, 0(t1)
+	sw t0, 1868(sp)
+
+    	# %608 = "riscv_ssa.li"() <{"immediate" = 3 : i32}> : () -> !riscv_ssa.re
+	li t0, 3
+	sw t0, 1872(sp)
+
+    	# %609 = "riscv_ssa.add"(%607, %608) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1868(sp)
+	lw t2, 1872(sp)
+	add t0, t1, t2
+	sw t0, 1876(sp)
+
+    	# "riscv_ssa.sw"(%609, %177) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1876(sp)
+	lw t2, 708(sp)
+	sw t1, 0(t2)
+
+    	# %610 = "riscv_ssa.lw"(%177) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 708(sp)
+	lw t0, 0(t1)
+	sw t0, 1880(sp)
+
+    	# %611 = "riscv_ssa.li"() <{"immediate" = 4 : i32}> : () -> !riscv_ssa.re
+	li t0, 4
+	sw t0, 1884(sp)
+
+    	# %612 = "riscv_ssa.div"(%610, %611) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1880(sp)
+	lw t2, 1884(sp)
+	div t0, t1, t2
+	sw t0, 1888(sp)
+
+    	# "riscv_ssa.sw"(%612, %179) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1888(sp)
+	lw t2, 716(sp)
+	sw t1, 0(t2)
+
+    	# %613 = "riscv_ssa.lw"(%179) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 716(sp)
+	lw t0, 0(t1)
+	sw t0, 1892(sp)
+
+    	# %614 = "riscv_ssa.li"() <{"immediate" = 435 : i32}> : () -> !riscv_ssa.re
+	li t0, 435
+	sw t0, 1896(sp)
+
+    	# %615 = "riscv_ssa.rem"(%613, %614) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1892(sp)
+	lw t2, 1896(sp)
+	rem t0, t1, t2
+	sw t0, 1900(sp)
+
+    	# "riscv_ssa.sw"(%615, %181) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1900(sp)
+	lw t2, 724(sp)
+	sw t1, 0(t2)
+
+    	# %616 = "riscv_ssa.lw"(%181) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 724(sp)
+	lw t0, 0(t1)
+	sw t0, 1904(sp)
+
+    	# %617 = "riscv_ssa.li"() <{"immediate" = 4 : i32}> : () -> !riscv_ssa.re
+	li t0, 4
+	sw t0, 1908(sp)
+
+    	# %618 = "riscv_ssa.add"(%616, %617) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1904(sp)
+	lw t2, 1908(sp)
+	add t0, t1, t2
+	sw t0, 1912(sp)
+
+    	# "riscv_ssa.sw"(%618, %183) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1912(sp)
+	lw t2, 732(sp)
+	sw t1, 0(t2)
+
+    	# %619 = "riscv_ssa.lw"(%183) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 732(sp)
+	lw t0, 0(t1)
+	sw t0, 1916(sp)
+
+    	# %620 = "riscv_ssa.li"() <{"immediate" = 5 : i32}> : () -> !riscv_ssa.re
+	li t0, 5
+	sw t0, 1920(sp)
+
+    	# %621 = "riscv_ssa.mul"(%619, %620) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1916(sp)
+	lw t2, 1920(sp)
+	mul t0, t1, t2
+	sw t0, 1924(sp)
+
+    	# "riscv_ssa.sw"(%621, %185) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1924(sp)
+	lw t2, 740(sp)
+	sw t1, 0(t2)
+
+    	# %622 = "riscv_ssa.lw"(%185) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 740(sp)
+	lw t0, 0(t1)
+	sw t0, 1928(sp)
+
+    	# %623 = "riscv_ssa.li"() <{"immediate" = 2 : i32}> : () -> !riscv_ssa.re
+	li t0, 2
+	sw t0, 1932(sp)
+
+    	# %624 = "riscv_ssa.div"(%622, %623) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1928(sp)
+	lw t2, 1932(sp)
+	div t0, t1, t2
+	sw t0, 1936(sp)
+
+    	# "riscv_ssa.sw"(%624, %187) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1936(sp)
+	lw t2, 748(sp)
+	sw t1, 0(t2)
+
+    	# %625 = "riscv_ssa.lw"(%187) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 748(sp)
+	lw t0, 0(t1)
+	sw t0, 1940(sp)
+
+    	# %626 = "riscv_ssa.li"() <{"immediate" = 7 : i32}> : () -> !riscv_ssa.re
+	li t0, 7
+	sw t0, 1944(sp)
+
+    	# %627 = "riscv_ssa.rem"(%625, %626) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1940(sp)
+	lw t2, 1944(sp)
+	rem t0, t1, t2
+	sw t0, 1948(sp)
+
+    	# "riscv_ssa.sw"(%627, %189) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1948(sp)
+	lw t2, 756(sp)
+	sw t1, 0(t2)
+
+    	# %628 = "riscv_ssa.lw"(%189) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 756(sp)
+	lw t0, 0(t1)
+	sw t0, 1952(sp)
+
+    	# %629 = "riscv_ssa.li"() <{"immediate" = 2 : i32}> : () -> !riscv_ssa.re
+	li t0, 2
+	sw t0, 1956(sp)
+
+    	# %630 = "riscv_ssa.mul"(%628, %629) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1952(sp)
+	lw t2, 1956(sp)
+	mul t0, t1, t2
+	sw t0, 1960(sp)
+
+    	# "riscv_ssa.sw"(%630, %191) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1960(sp)
+	lw t2, 764(sp)
+	sw t1, 0(t2)
+
+    	# %631 = "riscv_ssa.lw"(%191) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 764(sp)
+	lw t0, 0(t1)
+	sw t0, 1964(sp)
+
+    	# %632 = "riscv_ssa.li"() <{"immediate" = 2 : i32}> : () -> !riscv_ssa.re
+	li t0, 2
+	sw t0, 1968(sp)
+
+    	# %633 = "riscv_ssa.sub"(%631, %632) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1964(sp)
+	lw t2, 1968(sp)
+	sub t0, t1, t2
+	sw t0, 1972(sp)
+
+    	# "riscv_ssa.sw"(%633, %193) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1972(sp)
+	lw t2, 772(sp)
+	sw t1, 0(t2)
+
+    	# %634 = "riscv_ssa.lw"(%193) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 772(sp)
+	lw t0, 0(t1)
+	sw t0, 1976(sp)
+
+    	# %635 = "riscv_ssa.li"() <{"immediate" = 2 : i32}> : () -> !riscv_ssa.re
+	li t0, 2
+	sw t0, 1980(sp)
+
+    	# %636 = "riscv_ssa.mul"(%634, %635) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1976(sp)
+	lw t2, 1980(sp)
+	mul t0, t1, t2
+	sw t0, 1984(sp)
+
+    	# "riscv_ssa.sw"(%636, %195) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1984(sp)
+	lw t2, 780(sp)
+	sw t1, 0(t2)
+
+    	# %637 = "riscv_ssa.lw"(%195) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 780(sp)
+	lw t0, 0(t1)
+	sw t0, 1988(sp)
+
+    	# %638 = "riscv_ssa.li"() <{"immediate" = 3 : i32}> : () -> !riscv_ssa.re
+	li t0, 3
+	sw t0, 1992(sp)
+
+    	# %639 = "riscv_ssa.add"(%637, %638) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 1988(sp)
+	lw t2, 1992(sp)
+	add t0, t1, t2
+	sw t0, 1996(sp)
+
+    	# "riscv_ssa.sw"(%639, %197) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 1996(sp)
+	lw t2, 788(sp)
+	sw t1, 0(t2)
+
+    	# %640 = "riscv_ssa.lw"(%197) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 788(sp)
+	lw t0, 0(t1)
+	sw t0, 2000(sp)
+
+    	# %641 = "riscv_ssa.li"() <{"immediate" = 4 : i32}> : () -> !riscv_ssa.re
+	li t0, 4
+	sw t0, 2004(sp)
+
+    	# %642 = "riscv_ssa.div"(%640, %641) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 2000(sp)
+	lw t2, 2004(sp)
+	div t0, t1, t2
+	sw t0, 2008(sp)
+
+    	# "riscv_ssa.sw"(%642, %199) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 2008(sp)
+	lw t2, 796(sp)
+	sw t1, 0(t2)
+
+    	# %643 = "riscv_ssa.lw"(%199) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 796(sp)
+	lw t0, 0(t1)
+	sw t0, 2012(sp)
+
+    	# %644 = "riscv_ssa.li"() <{"immediate" = 42 : i32}> : () -> !riscv_ssa.re
+	li t0, 42
+	sw t0, 2016(sp)
+
+    	# %645 = "riscv_ssa.rem"(%643, %644) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 2012(sp)
+	lw t2, 2016(sp)
+	rem t0, t1, t2
+	sw t0, 2020(sp)
+
+    	# "riscv_ssa.sw"(%645, %201) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 2020(sp)
+	lw t2, 804(sp)
+	sw t1, 0(t2)
+
+    	# %646 = "riscv_ssa.lw"(%201) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 804(sp)
+	lw t0, 0(t1)
+	sw t0, 2024(sp)
+
+    	# riscv_ssa.call
+	lw a0, 2024(sp)
+	jal ra, _print_int
+
+    	# Footer Ops
+__main_return:
+	addi sp, sp, 2028
+	addi sp, sp, 408
+	lw ra, 0(sp)
+	addi sp, sp, 4
+
+    	# Exit program
+	li a0, 0
+	li a7, 93
+	ecall
+char_to_int:
+	addi sp, sp, -4
+	sw ra, 0(sp)
+	addi sp, sp, -372
+	addi sp, sp, -40
+	sw a0, 0(sp)
+	addi t0, sp, 372
+	sw t0, 4(sp)
+
+    	# "riscv_ssa.sw"(%204, %205) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 0(sp)
+	lw t2, 4(sp)
+	sw t1, 0(t2)
+
+    	# %206 = "riscv_ssa.lw"(%205) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 4(sp)
+	lw t0, 0(t1)
+	sw t0, 8(sp)
+	addi t0, sp, 376
+	sw t0, 12(sp)
+
+    	# %208 = "riscv_ssa.li"() <{"immediate" = 49 : i32}> : () -> !riscv_ssa.re
+	li t0, 49
+	sw t0, 16(sp)
+
+    	# %209 = "riscv_ssa.li"() <{"immediate" = 8 : i32}> : () -> !riscv_ssa.re
+	li t0, 8
+	sw t0, 20(sp)
+
+    	# riscv_ssa.call
+	lw a0, 20(sp)
+	jal ra, _malloc
+	sw a0, 24(sp)
+
+    	# %211 = "riscv_ssa.li"() <{"immediate" = 1 : i32}> : () -> !riscv_ssa.re
+	li t0, 1
+	sw t0, 28(sp)
+
+    	# "riscv_ssa.sw"(%211, %210) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 28(sp)
+	lw t2, 24(sp)
+	sw t1, 0(t2)
+
+    	# "riscv_ssa.sw"(%208, %210) <{"immediate" = 4 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 16(sp)
+	lw t2, 24(sp)
+	sw t1, 4(t2)
+
+    	# "riscv_ssa.sw"(%210, %207) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 24(sp)
+	lw t2, 12(sp)
+	sw t1, 0(t2)
+
+    	# %212 = "riscv_ssa.lw"(%207) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 12(sp)
+	lw t0, 0(t1)
+	sw t0, 32(sp)
+
+    	# riscv_ssa.call
+	lw a0, 8(sp)
+	lw a1, 32(sp)
+	jal ra, _str_eq
+	sw a0, 36(sp)
+
+    	# %214 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 40(sp)
+
+    	# "riscv_ssa.beq"(%213, %214) <{"offset" = #riscv.label<after_1>}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 36(sp)
+	lw t2, 40(sp)
+	beq t1, t2, after_1
+
+    	# "riscv_ssa.label"() <{"label" = #riscv.label<then_1>}> : () -> (
+then_1:
+
+    	# %215 = "riscv_ssa.li"() <{"immediate" = 1 : i32}> : () -> !riscv_ssa.re
+	li t0, 1
+	sw t0, 44(sp)
+	lw a0, 44(sp)
+	j _char_to_int_return
+
+    	# "riscv_ssa.j"() <{"offset" = #riscv.label<after_1>}> : () -> (
+	j after_1
+
+    	# "riscv_ssa.label"() <{"label" = #riscv.label<after_1>}> : () -> (
+after_1:
+
+    	# %216 = "riscv_ssa.lw"(%205) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 4(sp)
+	lw t0, 0(t1)
+	sw t0, 48(sp)
+	addi t0, sp, 380
+	sw t0, 52(sp)
+
+    	# %218 = "riscv_ssa.li"() <{"immediate" = 50 : i32}> : () -> !riscv_ssa.re
+	li t0, 50
+	sw t0, 56(sp)
+
+    	# %219 = "riscv_ssa.li"() <{"immediate" = 8 : i32}> : () -> !riscv_ssa.re
+	li t0, 8
+	sw t0, 60(sp)
+
+    	# riscv_ssa.call
+	lw a0, 60(sp)
+	jal ra, _malloc
+	sw a0, 64(sp)
+
+    	# %221 = "riscv_ssa.li"() <{"immediate" = 1 : i32}> : () -> !riscv_ssa.re
+	li t0, 1
+	sw t0, 68(sp)
+
+    	# "riscv_ssa.sw"(%221, %220) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 68(sp)
+	lw t2, 64(sp)
+	sw t1, 0(t2)
+
+    	# "riscv_ssa.sw"(%218, %220) <{"immediate" = 4 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 56(sp)
+	lw t2, 64(sp)
+	sw t1, 4(t2)
+
+    	# "riscv_ssa.sw"(%220, %217) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 64(sp)
+	lw t2, 52(sp)
+	sw t1, 0(t2)
+
+    	# %222 = "riscv_ssa.lw"(%217) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 52(sp)
+	lw t0, 0(t1)
+	sw t0, 72(sp)
+
+    	# riscv_ssa.call
+	lw a0, 48(sp)
+	lw a1, 72(sp)
+	jal ra, _str_eq
+	sw a0, 76(sp)
+
+    	# %224 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 80(sp)
+
+    	# "riscv_ssa.beq"(%223, %224) <{"offset" = #riscv.label<after_2>}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 76(sp)
+	lw t2, 80(sp)
+	beq t1, t2, after_2
+
+    	# "riscv_ssa.label"() <{"label" = #riscv.label<then_2>}> : () -> (
+then_2:
+
+    	# %225 = "riscv_ssa.li"() <{"immediate" = 2 : i32}> : () -> !riscv_ssa.re
+	li t0, 2
+	sw t0, 84(sp)
+	lw a0, 84(sp)
+	j _char_to_int_return
+
+    	# "riscv_ssa.j"() <{"offset" = #riscv.label<after_2>}> : () -> (
+	j after_2
+
+    	# "riscv_ssa.label"() <{"label" = #riscv.label<after_2>}> : () -> (
+after_2:
+
+    	# %226 = "riscv_ssa.lw"(%205) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 4(sp)
+	lw t0, 0(t1)
+	sw t0, 88(sp)
+	addi t0, sp, 384
+	sw t0, 92(sp)
+
+    	# %228 = "riscv_ssa.li"() <{"immediate" = 51 : i32}> : () -> !riscv_ssa.re
+	li t0, 51
+	sw t0, 96(sp)
+
+    	# %229 = "riscv_ssa.li"() <{"immediate" = 8 : i32}> : () -> !riscv_ssa.re
+	li t0, 8
+	sw t0, 100(sp)
+
+    	# riscv_ssa.call
+	lw a0, 100(sp)
+	jal ra, _malloc
+	sw a0, 104(sp)
+
+    	# %231 = "riscv_ssa.li"() <{"immediate" = 1 : i32}> : () -> !riscv_ssa.re
+	li t0, 1
+	sw t0, 108(sp)
+
+    	# "riscv_ssa.sw"(%231, %230) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 108(sp)
+	lw t2, 104(sp)
+	sw t1, 0(t2)
+
+    	# "riscv_ssa.sw"(%228, %230) <{"immediate" = 4 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 96(sp)
+	lw t2, 104(sp)
+	sw t1, 4(t2)
+
+    	# "riscv_ssa.sw"(%230, %227) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 104(sp)
+	lw t2, 92(sp)
+	sw t1, 0(t2)
+
+    	# %232 = "riscv_ssa.lw"(%227) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 92(sp)
+	lw t0, 0(t1)
+	sw t0, 112(sp)
+
+    	# riscv_ssa.call
+	lw a0, 88(sp)
+	lw a1, 112(sp)
+	jal ra, _str_eq
+	sw a0, 116(sp)
+
+    	# %234 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 120(sp)
+
+    	# "riscv_ssa.beq"(%233, %234) <{"offset" = #riscv.label<after_3>}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 116(sp)
+	lw t2, 120(sp)
+	beq t1, t2, after_3
+
+    	# "riscv_ssa.label"() <{"label" = #riscv.label<then_3>}> : () -> (
+then_3:
+
+    	# %235 = "riscv_ssa.li"() <{"immediate" = 3 : i32}> : () -> !riscv_ssa.re
+	li t0, 3
+	sw t0, 124(sp)
+	lw a0, 124(sp)
+	j _char_to_int_return
+
+    	# "riscv_ssa.j"() <{"offset" = #riscv.label<after_3>}> : () -> (
+	j after_3
+
+    	# "riscv_ssa.label"() <{"label" = #riscv.label<after_3>}> : () -> (
+after_3:
+
+    	# %236 = "riscv_ssa.lw"(%205) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 4(sp)
+	lw t0, 0(t1)
+	sw t0, 128(sp)
+	addi t0, sp, 388
+	sw t0, 132(sp)
+
+    	# %238 = "riscv_ssa.li"() <{"immediate" = 52 : i32}> : () -> !riscv_ssa.re
+	li t0, 52
+	sw t0, 136(sp)
+
+    	# %239 = "riscv_ssa.li"() <{"immediate" = 8 : i32}> : () -> !riscv_ssa.re
+	li t0, 8
+	sw t0, 140(sp)
+
+    	# riscv_ssa.call
+	lw a0, 140(sp)
+	jal ra, _malloc
+	sw a0, 144(sp)
+
+    	# %241 = "riscv_ssa.li"() <{"immediate" = 1 : i32}> : () -> !riscv_ssa.re
+	li t0, 1
+	sw t0, 148(sp)
+
+    	# "riscv_ssa.sw"(%241, %240) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 148(sp)
+	lw t2, 144(sp)
+	sw t1, 0(t2)
+
+    	# "riscv_ssa.sw"(%238, %240) <{"immediate" = 4 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 136(sp)
+	lw t2, 144(sp)
+	sw t1, 4(t2)
+
+    	# "riscv_ssa.sw"(%240, %237) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 144(sp)
+	lw t2, 132(sp)
+	sw t1, 0(t2)
+
+    	# %242 = "riscv_ssa.lw"(%237) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 132(sp)
+	lw t0, 0(t1)
+	sw t0, 152(sp)
+
+    	# riscv_ssa.call
+	lw a0, 128(sp)
+	lw a1, 152(sp)
+	jal ra, _str_eq
+	sw a0, 156(sp)
+
+    	# %244 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 160(sp)
+
+    	# "riscv_ssa.beq"(%243, %244) <{"offset" = #riscv.label<after_4>}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 156(sp)
+	lw t2, 160(sp)
+	beq t1, t2, after_4
+
+    	# "riscv_ssa.label"() <{"label" = #riscv.label<then_4>}> : () -> (
+then_4:
+
+    	# %245 = "riscv_ssa.li"() <{"immediate" = 4 : i32}> : () -> !riscv_ssa.re
+	li t0, 4
+	sw t0, 164(sp)
+	lw a0, 164(sp)
+	j _char_to_int_return
+
+    	# "riscv_ssa.j"() <{"offset" = #riscv.label<after_4>}> : () -> (
+	j after_4
+
+    	# "riscv_ssa.label"() <{"label" = #riscv.label<after_4>}> : () -> (
+after_4:
+
+    	# %246 = "riscv_ssa.lw"(%205) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 4(sp)
+	lw t0, 0(t1)
+	sw t0, 168(sp)
+	addi t0, sp, 392
+	sw t0, 172(sp)
+
+    	# %248 = "riscv_ssa.li"() <{"immediate" = 53 : i32}> : () -> !riscv_ssa.re
+	li t0, 53
+	sw t0, 176(sp)
+
+    	# %249 = "riscv_ssa.li"() <{"immediate" = 8 : i32}> : () -> !riscv_ssa.re
+	li t0, 8
+	sw t0, 180(sp)
+
+    	# riscv_ssa.call
+	lw a0, 180(sp)
+	jal ra, _malloc
+	sw a0, 184(sp)
+
+    	# %251 = "riscv_ssa.li"() <{"immediate" = 1 : i32}> : () -> !riscv_ssa.re
+	li t0, 1
+	sw t0, 188(sp)
+
+    	# "riscv_ssa.sw"(%251, %250) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 188(sp)
+	lw t2, 184(sp)
+	sw t1, 0(t2)
+
+    	# "riscv_ssa.sw"(%248, %250) <{"immediate" = 4 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 176(sp)
+	lw t2, 184(sp)
+	sw t1, 4(t2)
+
+    	# "riscv_ssa.sw"(%250, %247) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 184(sp)
+	lw t2, 172(sp)
+	sw t1, 0(t2)
+
+    	# %252 = "riscv_ssa.lw"(%247) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 172(sp)
+	lw t0, 0(t1)
+	sw t0, 192(sp)
+
+    	# riscv_ssa.call
+	lw a0, 168(sp)
+	lw a1, 192(sp)
+	jal ra, _str_eq
+	sw a0, 196(sp)
+
+    	# %254 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 200(sp)
+
+    	# "riscv_ssa.beq"(%253, %254) <{"offset" = #riscv.label<after_5>}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 196(sp)
+	lw t2, 200(sp)
+	beq t1, t2, after_5
+
+    	# "riscv_ssa.label"() <{"label" = #riscv.label<then_5>}> : () -> (
+then_5:
+
+    	# %255 = "riscv_ssa.li"() <{"immediate" = 5 : i32}> : () -> !riscv_ssa.re
+	li t0, 5
+	sw t0, 204(sp)
+	lw a0, 204(sp)
+	j _char_to_int_return
+
+    	# "riscv_ssa.j"() <{"offset" = #riscv.label<after_5>}> : () -> (
+	j after_5
+
+    	# "riscv_ssa.label"() <{"label" = #riscv.label<after_5>}> : () -> (
+after_5:
+
+    	# %256 = "riscv_ssa.lw"(%205) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 4(sp)
+	lw t0, 0(t1)
+	sw t0, 208(sp)
+	addi t0, sp, 396
+	sw t0, 212(sp)
+
+    	# %258 = "riscv_ssa.li"() <{"immediate" = 54 : i32}> : () -> !riscv_ssa.re
+	li t0, 54
+	sw t0, 216(sp)
+
+    	# %259 = "riscv_ssa.li"() <{"immediate" = 8 : i32}> : () -> !riscv_ssa.re
+	li t0, 8
+	sw t0, 220(sp)
+
+    	# riscv_ssa.call
+	lw a0, 220(sp)
+	jal ra, _malloc
+	sw a0, 224(sp)
+
+    	# %261 = "riscv_ssa.li"() <{"immediate" = 1 : i32}> : () -> !riscv_ssa.re
+	li t0, 1
+	sw t0, 228(sp)
+
+    	# "riscv_ssa.sw"(%261, %260) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 228(sp)
+	lw t2, 224(sp)
+	sw t1, 0(t2)
+
+    	# "riscv_ssa.sw"(%258, %260) <{"immediate" = 4 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 216(sp)
+	lw t2, 224(sp)
+	sw t1, 4(t2)
+
+    	# "riscv_ssa.sw"(%260, %257) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 224(sp)
+	lw t2, 212(sp)
+	sw t1, 0(t2)
+
+    	# %262 = "riscv_ssa.lw"(%257) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 212(sp)
+	lw t0, 0(t1)
+	sw t0, 232(sp)
+
+    	# riscv_ssa.call
+	lw a0, 208(sp)
+	lw a1, 232(sp)
+	jal ra, _str_eq
+	sw a0, 236(sp)
+
+    	# %264 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 240(sp)
+
+    	# "riscv_ssa.beq"(%263, %264) <{"offset" = #riscv.label<after_6>}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 236(sp)
+	lw t2, 240(sp)
+	beq t1, t2, after_6
+
+    	# "riscv_ssa.label"() <{"label" = #riscv.label<then_6>}> : () -> (
+then_6:
+
+    	# %265 = "riscv_ssa.li"() <{"immediate" = 6 : i32}> : () -> !riscv_ssa.re
+	li t0, 6
+	sw t0, 244(sp)
+	lw a0, 244(sp)
+	j _char_to_int_return
+
+    	# "riscv_ssa.j"() <{"offset" = #riscv.label<after_6>}> : () -> (
+	j after_6
+
+    	# "riscv_ssa.label"() <{"label" = #riscv.label<after_6>}> : () -> (
+after_6:
+
+    	# %266 = "riscv_ssa.lw"(%205) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 4(sp)
+	lw t0, 0(t1)
+	sw t0, 248(sp)
+	addi t0, sp, 400
+	sw t0, 252(sp)
+
+    	# %268 = "riscv_ssa.li"() <{"immediate" = 55 : i32}> : () -> !riscv_ssa.re
+	li t0, 55
+	sw t0, 256(sp)
+
+    	# %269 = "riscv_ssa.li"() <{"immediate" = 8 : i32}> : () -> !riscv_ssa.re
+	li t0, 8
+	sw t0, 260(sp)
+
+    	# riscv_ssa.call
+	lw a0, 260(sp)
+	jal ra, _malloc
+	sw a0, 264(sp)
+
+    	# %271 = "riscv_ssa.li"() <{"immediate" = 1 : i32}> : () -> !riscv_ssa.re
+	li t0, 1
+	sw t0, 268(sp)
+
+    	# "riscv_ssa.sw"(%271, %270) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 268(sp)
+	lw t2, 264(sp)
+	sw t1, 0(t2)
+
+    	# "riscv_ssa.sw"(%268, %270) <{"immediate" = 4 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 256(sp)
+	lw t2, 264(sp)
+	sw t1, 4(t2)
+
+    	# "riscv_ssa.sw"(%270, %267) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 264(sp)
+	lw t2, 252(sp)
+	sw t1, 0(t2)
+
+    	# %272 = "riscv_ssa.lw"(%267) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 252(sp)
+	lw t0, 0(t1)
+	sw t0, 272(sp)
+
+    	# riscv_ssa.call
+	lw a0, 248(sp)
+	lw a1, 272(sp)
+	jal ra, _str_eq
+	sw a0, 276(sp)
+
+    	# %274 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 280(sp)
+
+    	# "riscv_ssa.beq"(%273, %274) <{"offset" = #riscv.label<after_7>}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 276(sp)
+	lw t2, 280(sp)
+	beq t1, t2, after_7
+
+    	# "riscv_ssa.label"() <{"label" = #riscv.label<then_7>}> : () -> (
+then_7:
+
+    	# %275 = "riscv_ssa.li"() <{"immediate" = 7 : i32}> : () -> !riscv_ssa.re
+	li t0, 7
+	sw t0, 284(sp)
+	lw a0, 284(sp)
+	j _char_to_int_return
+
+    	# "riscv_ssa.j"() <{"offset" = #riscv.label<after_7>}> : () -> (
+	j after_7
+
+    	# "riscv_ssa.label"() <{"label" = #riscv.label<after_7>}> : () -> (
+after_7:
+
+    	# %276 = "riscv_ssa.lw"(%205) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 4(sp)
+	lw t0, 0(t1)
+	sw t0, 288(sp)
+	addi t0, sp, 404
+	sw t0, 292(sp)
+
+    	# %278 = "riscv_ssa.li"() <{"immediate" = 56 : i32}> : () -> !riscv_ssa.re
+	li t0, 56
+	sw t0, 296(sp)
+
+    	# %279 = "riscv_ssa.li"() <{"immediate" = 8 : i32}> : () -> !riscv_ssa.re
+	li t0, 8
+	sw t0, 300(sp)
+
+    	# riscv_ssa.call
+	lw a0, 300(sp)
+	jal ra, _malloc
+	sw a0, 304(sp)
+
+    	# %281 = "riscv_ssa.li"() <{"immediate" = 1 : i32}> : () -> !riscv_ssa.re
+	li t0, 1
+	sw t0, 308(sp)
+
+    	# "riscv_ssa.sw"(%281, %280) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 308(sp)
+	lw t2, 304(sp)
+	sw t1, 0(t2)
+
+    	# "riscv_ssa.sw"(%278, %280) <{"immediate" = 4 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 296(sp)
+	lw t2, 304(sp)
+	sw t1, 4(t2)
+
+    	# "riscv_ssa.sw"(%280, %277) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 304(sp)
+	lw t2, 292(sp)
+	sw t1, 0(t2)
+
+    	# %282 = "riscv_ssa.lw"(%277) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 292(sp)
+	lw t0, 0(t1)
+	sw t0, 312(sp)
+
+    	# riscv_ssa.call
+	lw a0, 288(sp)
+	lw a1, 312(sp)
+	jal ra, _str_eq
+	sw a0, 316(sp)
+
+    	# %284 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 320(sp)
+
+    	# "riscv_ssa.beq"(%283, %284) <{"offset" = #riscv.label<after_8>}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 316(sp)
+	lw t2, 320(sp)
+	beq t1, t2, after_8
+
+    	# "riscv_ssa.label"() <{"label" = #riscv.label<then_8>}> : () -> (
+then_8:
+
+    	# %285 = "riscv_ssa.li"() <{"immediate" = 8 : i32}> : () -> !riscv_ssa.re
+	li t0, 8
+	sw t0, 324(sp)
+	lw a0, 324(sp)
+	j _char_to_int_return
+
+    	# "riscv_ssa.j"() <{"offset" = #riscv.label<after_8>}> : () -> (
+	j after_8
+
+    	# "riscv_ssa.label"() <{"label" = #riscv.label<after_8>}> : () -> (
+after_8:
+
+    	# %286 = "riscv_ssa.lw"(%205) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 4(sp)
+	lw t0, 0(t1)
+	sw t0, 328(sp)
+	addi t0, sp, 408
+	sw t0, 332(sp)
+
+    	# %288 = "riscv_ssa.li"() <{"immediate" = 57 : i32}> : () -> !riscv_ssa.re
+	li t0, 57
+	sw t0, 336(sp)
+
+    	# %289 = "riscv_ssa.li"() <{"immediate" = 8 : i32}> : () -> !riscv_ssa.re
+	li t0, 8
+	sw t0, 340(sp)
+
+    	# riscv_ssa.call
+	lw a0, 340(sp)
+	jal ra, _malloc
+	sw a0, 344(sp)
+
+    	# %291 = "riscv_ssa.li"() <{"immediate" = 1 : i32}> : () -> !riscv_ssa.re
+	li t0, 1
+	sw t0, 348(sp)
+
+    	# "riscv_ssa.sw"(%291, %290) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 348(sp)
+	lw t2, 344(sp)
+	sw t1, 0(t2)
+
+    	# "riscv_ssa.sw"(%288, %290) <{"immediate" = 4 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 336(sp)
+	lw t2, 344(sp)
+	sw t1, 4(t2)
+
+    	# "riscv_ssa.sw"(%290, %287) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 344(sp)
+	lw t2, 332(sp)
+	sw t1, 0(t2)
+
+    	# %292 = "riscv_ssa.lw"(%287) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 332(sp)
+	lw t0, 0(t1)
+	sw t0, 352(sp)
+
+    	# riscv_ssa.call
+	lw a0, 328(sp)
+	lw a1, 352(sp)
+	jal ra, _str_eq
+	sw a0, 356(sp)
+
+    	# %294 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 360(sp)
+
+    	# "riscv_ssa.beq"(%293, %294) <{"offset" = #riscv.label<after_9>}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 356(sp)
+	lw t2, 360(sp)
+	beq t1, t2, after_9
+
+    	# "riscv_ssa.label"() <{"label" = #riscv.label<then_9>}> : () -> (
+then_9:
+
+    	# %295 = "riscv_ssa.li"() <{"immediate" = 9 : i32}> : () -> !riscv_ssa.re
+	li t0, 9
+	sw t0, 364(sp)
+	lw a0, 364(sp)
+	j _char_to_int_return
+
+    	# "riscv_ssa.j"() <{"offset" = #riscv.label<after_9>}> : () -> (
+	j after_9
+
+    	# "riscv_ssa.label"() <{"label" = #riscv.label<after_9>}> : () -> (
+after_9:
+
+    	# %296 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 368(sp)
+	lw a0, 368(sp)
+	j _char_to_int_return
+
+    	# Footer Ops
+_char_to_int_return:
+	addi sp, sp, 372
+	addi sp, sp, 40
+	lw ra, 0(sp)
+	addi sp, sp, 4
+	ret
+str_to_int:
+	addi sp, sp, -4
+	sw ra, 0(sp)
+	addi sp, sp, -188
+	addi sp, sp, -20
+	sw a0, 0(sp)
+	addi t0, sp, 188
+	sw t0, 4(sp)
+
+    	# "riscv_ssa.sw"(%297, %298) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 0(sp)
+	lw t2, 4(sp)
+	sw t1, 0(t2)
+	addi t0, sp, 192
+	sw t0, 8(sp)
+
+    	# %300 = "riscv_ssa.li"() <{"immediate" = 4 : i32}> : () -> !riscv_ssa.re
+	li t0, 4
+	sw t0, 12(sp)
+
+    	# riscv_ssa.call
+	lw a0, 12(sp)
+	jal ra, _malloc
+	sw a0, 16(sp)
+
+    	# %302 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 20(sp)
+
+    	# "riscv_ssa.sw"(%302, %301) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 20(sp)
+	lw t2, 16(sp)
+	sw t1, 0(t2)
+
+    	# "riscv_ssa.sw"(%301, %299) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 16(sp)
+	lw t2, 8(sp)
+	sw t1, 0(t2)
+
+    	# %303 = "riscv_ssa.lw"(%299) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 8(sp)
+	lw t0, 0(t1)
+	sw t0, 24(sp)
+	addi t0, sp, 196
+	sw t0, 28(sp)
+
+    	# "riscv_ssa.sw"(%303, %304) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 24(sp)
+	lw t2, 28(sp)
+	sw t1, 0(t2)
+
+    	# %305 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 32(sp)
+	addi t0, sp, 200
+	sw t0, 36(sp)
+
+    	# "riscv_ssa.sw"(%305, %306) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 32(sp)
+	lw t2, 36(sp)
+	sw t1, 0(t2)
+
+    	# %307 = "riscv_ssa.lw"(%298) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 4(sp)
+	lw t0, 0(t1)
+	sw t0, 40(sp)
+	addi t0, sp, 204
+	sw t0, 44(sp)
+
+    	# %309 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 48(sp)
+
+    	# "riscv_ssa.sw"(%309, %308) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 48(sp)
+	lw t2, 44(sp)
+	sw t1, 0(t2)
+
+    	# "riscv_ssa.j"() <{"offset" = #riscv.label<test_1>}> : () -> (
+	j test_1
+
+    	# "riscv_ssa.label"() <{"label" = #riscv.label<body_1>}> : () -> (
+body_1:
+
+    	# %310 = "riscv_ssa.lw"(%308) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 44(sp)
+	lw t0, 0(t1)
+	sw t0, 52(sp)
+
+    	# %311 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 56(sp)
+
+    	# %312 = "riscv_ssa.li"() <{"immediate" = 4 : i32}> : () -> !riscv_ssa.re
+	li t0, 4
+	sw t0, 60(sp)
+
+    	# "riscv_ssa.beq"(%307, %311) <{"offset" = #riscv.label<list_none_error_1>}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 40(sp)
+	lw t2, 56(sp)
+	beq t1, t2, list_none_error_1
+
+    	# %313 = "riscv_ssa.lw"(%307) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 40(sp)
+	lw t0, 0(t1)
+	sw t0, 64(sp)
+
+    	# %314 = "riscv_ssa.slt"(%310, %311) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 52(sp)
+	lw t2, 56(sp)
+	slt t0, t1, t2
+	sw t0, 68(sp)
+
+    	# %315 = "riscv_ssa.slt"(%313, %310) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 64(sp)
+	lw t2, 52(sp)
+	slt t0, t1, t2
+	sw t0, 72(sp)
+
+    	# %316 = "riscv_ssa.or"(%314, %315) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 68(sp)
+	lw t2, 72(sp)
+	or t0, t1, t2
+	sw t0, 76(sp)
+
+    	# "riscv_ssa.bne"(%316, %311) <{"offset" = #riscv.label<list_oob_error_1>}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 76(sp)
+	lw t2, 56(sp)
+	bne t1, t2, list_oob_error_1
+
+    	# %317 = "riscv_ssa.li"() <{"immediate" = 4 : i32}> : () -> !riscv_ssa.re
+	li t0, 4
+	sw t0, 80(sp)
+
+    	# %318 = "riscv_ssa.addi"(%310) <{"immediate" = 1 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 52(sp)
+	addi t0, t1, 1
+	sw t0, 84(sp)
+
+    	# %319 = "riscv_ssa.mul"(%318, %317) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 84(sp)
+	lw t2, 80(sp)
+	mul t0, t1, t2
+	sw t0, 88(sp)
+
+    	# "riscv_ssa.j"() <{"offset" = #riscv.label<list_continue_1>}> : () -> (
+	j list_continue_1
+
+    	# "riscv_ssa.label"() <{"label" = #riscv.label<list_none_error_1>}> : () -> (
+list_none_error_1:
+
+    	# riscv_ssa.call
+	jal ra, _list_index_none
+	sw a0, 92(sp)
+
+    	# "riscv_ssa.label"() <{"label" = #riscv.label<list_oob_error_1>}> : () -> (
+list_oob_error_1:
+
+    	# riscv_ssa.call
+	jal ra, _list_index_oob
+	sw a0, 96(sp)
+
+    	# "riscv_ssa.label"() <{"label" = #riscv.label<list_continue_1>}> : () -> (
+list_continue_1:
+
+    	# %322 = "riscv_ssa.add"(%307, %319) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 40(sp)
+	lw t2, 88(sp)
+	add t0, t1, t2
+	sw t0, 100(sp)
+
+    	# %323 = "riscv_ssa.lw"(%322) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 100(sp)
+	lw t0, 0(t1)
+	sw t0, 104(sp)
+
+    	# %324 = "riscv_ssa.li"() <{"immediate" = 8 : i32}> : () -> !riscv_ssa.re
+	li t0, 8
+	sw t0, 108(sp)
+
+    	# riscv_ssa.call
+	lw a0, 108(sp)
+	jal ra, _malloc
+	sw a0, 112(sp)
+
+    	# %326 = "riscv_ssa.li"() <{"immediate" = 1 : i32}> : () -> !riscv_ssa.re
+	li t0, 1
+	sw t0, 116(sp)
+
+    	# "riscv_ssa.sw"(%326, %325) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 116(sp)
+	lw t2, 112(sp)
+	sw t1, 0(t2)
+
+    	# "riscv_ssa.sw"(%323, %325) <{"immediate" = 4 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 104(sp)
+	lw t2, 112(sp)
+	sw t1, 4(t2)
+
+    	# %327 = "riscv_ssa.addi"(%325) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 112(sp)
+	addi t0, t1, 0
+	sw t0, 120(sp)
+
+    	# "riscv_ssa.sw"(%327, %304) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 120(sp)
+	lw t2, 28(sp)
+	sw t1, 0(t2)
+
+    	# %328 = "riscv_ssa.lw"(%306) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 36(sp)
+	lw t0, 0(t1)
+	sw t0, 124(sp)
+
+    	# %329 = "riscv_ssa.li"() <{"immediate" = 10 : i32}> : () -> !riscv_ssa.re
+	li t0, 10
+	sw t0, 128(sp)
+
+    	# %330 = "riscv_ssa.mul"(%328, %329) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 124(sp)
+	lw t2, 128(sp)
+	mul t0, t1, t2
+	sw t0, 132(sp)
+
+    	# "riscv_ssa.sw"(%330, %306) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 132(sp)
+	lw t2, 36(sp)
+	sw t1, 0(t2)
+
+    	# %331 = "riscv_ssa.lw"(%306) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 36(sp)
+	lw t0, 0(t1)
+	sw t0, 136(sp)
+
+    	# %332 = "riscv_ssa.lw"(%304) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 28(sp)
+	lw t0, 0(t1)
+	sw t0, 140(sp)
+
+    	# riscv_ssa.call
+	lw a0, 140(sp)
+	jal ra, char_to_int
+	sw a0, 144(sp)
+
+    	# %334 = "riscv_ssa.add"(%331, %333) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 136(sp)
+	lw t2, 144(sp)
+	add t0, t1, t2
+	sw t0, 148(sp)
+
+    	# "riscv_ssa.sw"(%334, %306) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 148(sp)
+	lw t2, 36(sp)
+	sw t1, 0(t2)
+
+    	# %335 = "riscv_ssa.lw"(%308) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 44(sp)
+	lw t0, 0(t1)
+	sw t0, 152(sp)
+
+    	# %336 = "riscv_ssa.li"() <{"immediate" = 1 : i32}> : () -> !riscv_ssa.re
+	li t0, 1
+	sw t0, 156(sp)
+
+    	# %337 = "riscv_ssa.add"(%335, %336) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 152(sp)
+	lw t2, 156(sp)
+	add t0, t1, t2
+	sw t0, 160(sp)
+
+    	# "riscv_ssa.sw"(%337, %308) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 160(sp)
+	lw t2, 44(sp)
+	sw t1, 0(t2)
+
+    	# "riscv_ssa.label"() <{"label" = #riscv.label<test_1>}> : () -> (
+test_1:
+
+    	# %338 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 164(sp)
+
+    	# "riscv_ssa.beq"(%307, %338) <{"offset" = #riscv.label<_error_len_none>}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 40(sp)
+	lw t2, 164(sp)
+	beq t1, t2, _error_len_none
+
+    	# %339 = "riscv_ssa.lw"(%307) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 40(sp)
+	lw t0, 0(t1)
+	sw t0, 168(sp)
+
+    	# %340 = "riscv_ssa.lw"(%308) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 44(sp)
+	lw t0, 0(t1)
+	sw t0, 172(sp)
+
+    	# %341 = "riscv_ssa.slt"(%340, %339) : (!riscv_ssa.reg, !riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 172(sp)
+	lw t2, 168(sp)
+	slt t0, t1, t2
+	sw t0, 176(sp)
+
+    	# %342 = "riscv_ssa.li"() <{"immediate" = 1 : i32}> : () -> !riscv_ssa.re
+	li t0, 1
+	sw t0, 180(sp)
+
+    	# "riscv_ssa.beq"(%341, %342) <{"offset" = #riscv.label<body_1>}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 176(sp)
+	lw t2, 180(sp)
+	beq t1, t2, body_1
+
+    	# %343 = "riscv_ssa.lw"(%306) <{"immediate" = 0 : i32}> : (!riscv_ssa.reg) -> !riscv_ssa.re
+	lw t1, 36(sp)
+	lw t0, 0(t1)
+	sw t0, 184(sp)
+	lw a0, 184(sp)
+	j _str_to_int_return
+
+    	# Footer Ops
+_str_to_int_return:
+	addi sp, sp, 188
+	addi sp, sp, 20
+	lw ra, 0(sp)
+	addi sp, sp, 4
+	ret
+_print_int:
+	addi sp, sp, -12
+	mv t1, a0
+	li t2, 10
+	slti t6, t1, 0
+	slti t6, t1, 0
+	li t5, 2
+	mul t6, t5, t6
+	li t5, 1
+	sub t5, t5, t6
+	mul t1, t5, t1
+	mv t6, zero
+	rem t0, t1, t2
+	addi t0, t0, 48
+	slti t3, t1, 1
+	add t6, t6, t3
+	sb t0, 10(sp)
+	div t1, t1, t2
+	rem t0, t1, t2
+	addi t0, t0, 48
+	slti t3, t1, 1
+	add t6, t6, t3
+	sb t0, 9(sp)
+	div t1, t1, t2
+	rem t0, t1, t2
+	addi t0, t0, 48
+	slti t3, t1, 1
+	add t6, t6, t3
+	sb t0, 8(sp)
+	div t1, t1, t2
+	rem t0, t1, t2
+	addi t0, t0, 48
+	slti t3, t1, 1
+	add t6, t6, t3
+	sb t0, 7(sp)
+	div t1, t1, t2
+	rem t0, t1, t2
+	addi t0, t0, 48
+	slti t3, t1, 1
+	add t6, t6, t3
+	sb t0, 6(sp)
+	div t1, t1, t2
+	rem t0, t1, t2
+	addi t0, t0, 48
+	slti t3, t1, 1
+	add t6, t6, t3
+	sb t0, 5(sp)
+	div t1, t1, t2
+	rem t0, t1, t2
+	addi t0, t0, 48
+	slti t3, t1, 1
+	add t6, t6, t3
+	sb t0, 4(sp)
+	div t1, t1, t2
+	rem t0, t1, t2
+	addi t0, t0, 48
+	slti t3, t1, 1
+	add t6, t6, t3
+	sb t0, 3(sp)
+	div t1, t1, t2
+	rem t0, t1, t2
+	addi t0, t0, 48
+	slti t3, t1, 1
+	add t6, t6, t3
+	sb t0, 2(sp)
+	div t1, t1, t2
+	rem t0, t1, t2
+	addi t0, t0, 48
+	slti t3, t1, 1
+	slt t4, zero, a0
+	slt t5, a0, zero
+	or t4, t4, t5
+	and t3, t3, t4
+	add t6, t6, t3
+	sb t0, 1(sp)
+	div t1, t1, t2
+	slti t5, t5, -1
+	add t6, t6, t5
+	li t5, 45
+	add t4, sp, t6
+	sb t5, 0(t4)
+	li t4, -1
+	slt t3, t4, a0
+	add t6, t6, t3
+	li t0, 10
+	sb t0, 11(sp)
+	li a0, 1
+	mv a1, sp
+	add a1, a1, t6
+	li a2, 12
+	sub a2, a2, t6
+	li a7, 64
+	ecall
+	addi sp, sp, 12
+	ret
+_print_bool:
+	addi sp, sp, -16
+	li t0, 70
+	sb t0, 0(sp)
+	li t0, 97
+	sb t0, 1(sp)
+	li t0, 108
+	sb t0, 2(sp)
+	li t0, 115
+	sb t0, 3(sp)
+	li t0, 101
+	sb t0, 4(sp)
+	li t0, 10
+	sb t0, 5(sp)
+	li t0, 0
+	sb t0, 6(sp)
+	li t0, 84
+	sb t0, 7(sp)
+	li t0, 114
+	sb t0, 8(sp)
+	li t0, 117
+	sb t0, 9(sp)
+	li t0, 101
+	sb t0, 10(sp)
+	li t0, 10
+	sb t0, 11(sp)
+	li t0, 0
+	sb t0, 12(sp)
+	li t1, 7
+	sltu t2, zero, a0
+	mul t1, t1, t2
+	add t1, t1, sp
+	li t3, 6
+	sltu t4, zero, a0
+	sub t4, t3, t4
+	li a0, 1
+	mv a1, t1
+	mv a2, t4
+	li a7, 64
+	ecall
+	addi sp, sp, 16
+	ret
+_print_str:
+	addi t0, a0, 0
+	lw t2, 0(t0)
+	li t1, 0
+	sub sp, sp, t2
+	addi sp, sp, -1
+	beq t1, t2, _print_str_loop_finished
+_print_str_loop_header:
+	li t6, 4
+	mul t3, t1, t6
+	add t4, t0, t3
+	lw t5, 4(t4)
+	add t4, sp, t1
+	sb t5, 0(t4)
+	addi t1, t1, 1
+	bne t1, t2, _print_str_loop_header
+_print_str_loop_finished:
+	add t4, sp, t1
+	li t5, 10
+	sb t5, 0(t4)
+	li a0, 1
+	mv a1, sp
+	addi t3, t2, 1
+	mv a2, t3
+	li a7, 64
+	ecall
+	addi sp, sp, 1
+	add sp, sp, t2
+	ret
+_input:
+	addi sp, sp, -1024
+	sw ra, 1020(sp)
+	li a0, 0
+	mv a1, sp
+	li a2, 1020
+	li a7, 63
+	ecall
+	li t1, 4
+	mv t4, a0
+	addi t4, t4, -1
+	mul a0, a0, t1
+	add a0, a0, t1
+	jal ra, _malloc
+	li t1, 4
+	sw t4, 0(a0)
+	li t5, 0
+	beq t4, t5, _input_loop_finished
+_input_loop_header:
+	add t3, sp, t5
+	lb t6, 0(t3)
+	mul t3, t5, t1
+	add t3, a0, t3
+	sw t6, 4(t3)
+	addi t5, t5, 1
+	bne t4, t5, _input_loop_header
+_input_loop_finished:
+	lw ra, 1020(sp)
+	addi sp, sp, 1024
+	ret
+_list_concat:
+	addi sp, sp, -24
+	lw t0, 0(a0)
+	lw t1, 0(a1)
+	add t2, t0, t1
+	li t3, 4
+	mul t4, t2, t3
+	addi t4, t4, 4
+	sw ra, 0(sp)
+	sw t0, 4(sp)
+	sw t1, 8(sp)
+	sw t2, 12(sp)
+	sw a0, 16(sp)
+	sw a1, 20(sp)
+	addi a0, t4, 0
+	jal ra, _malloc
+	lw ra, 0(sp)
+	lw t0, 4(sp)
+	lw t1, 8(sp)
+	lw t2, 12(sp)
+	lw t3, 16(sp)
+	lw t4, 20(sp)
+	sw t2, 0(a0)
+	li t5, 0
+	addi t6, a0, 0
+	beq t0, zero, _list_concat_repeat_first_end
+_list_concat_repeat_first:
+	addi t5, t5, 1
+	addi t3, t3, 4
+	addi t6, t6, 4
+	lw t2, 0(t3)
+	sw t2, 0(t6)
+	bne t5, t0, _list_concat_repeat_first
+_list_concat_repeat_first_end:
+	li t5, 0
+	beq t1, zero, _list_concat_repeat_second_end
+_list_concat_repeat_second:
+	addi t5, t5, 1
+	addi t4, t4, 4
+	addi t6, t6, 4
+	lw t2, 0(t4)
+	sw t2, 0(t6)
+	bne t5, t1, _list_concat_repeat_second
+_list_concat_repeat_second_end:
+	addi sp, sp, 24
+	ret
+_str_eq:
+	lw t0, 0(a0)
+	lw t1, 0(a1)
+	bne t0, t1, _str_eq_return_false
+	beq t0, zero, _str_eq_return_true
+	addi t2, a0, 4
+	addi t3, a1, 4
+	li t5, 4
+	mul t5, t0, t5
+	add t4, a0, t5
+	addi t4, t4, 4
+_str_eq_loop_begin:
+	lw t5, 0(t2)
+	lw t6, 0(t3)
+	bne t5, t6, _str_eq_return_false
+	addi t2, t2, 4
+	addi t3, t3, 4
+	blt t2, t4, _str_eq_loop_begin
+_str_eq_return_true:
+	li a0, 1
+	ret
+_str_eq_return_false:
+	li a0, 0
+	ret
+_error_len_none:
+	addi sp, sp, -52
+	li t0, 84
+	sb t0, 0(sp)
+	li t0, 121
+	sb t0, 1(sp)
+	li t0, 112
+	sb t0, 2(sp)
+	li t0, 101
+	sb t0, 3(sp)
+	li t0, 69
+	sb t0, 4(sp)
+	li t0, 114
+	sb t0, 5(sp)
+	li t0, 114
+	sb t0, 6(sp)
+	li t0, 111
+	sb t0, 7(sp)
+	li t0, 114
+	sb t0, 8(sp)
+	li t0, 58
+	sb t0, 9(sp)
+	li t0, 32
+	sb t0, 10(sp)
+	li t0, 111
+	sb t0, 11(sp)
+	li t0, 98
+	sb t0, 12(sp)
+	li t0, 106
+	sb t0, 13(sp)
+	li t0, 101
+	sb t0, 14(sp)
+	li t0, 99
+	sb t0, 15(sp)
+	li t0, 116
+	sb t0, 16(sp)
+	li t0, 32
+	sb t0, 17(sp)
+	li t0, 111
+	sb t0, 18(sp)
+	li t0, 102
+	sb t0, 19(sp)
+	li t0, 32
+	sb t0, 20(sp)
+	li t0, 116
+	sb t0, 21(sp)
+	li t0, 121
+	sb t0, 22(sp)
+	li t0, 112
+	sb t0, 23(sp)
+	li t0, 101
+	sb t0, 24(sp)
+	li t0, 32
+	sb t0, 25(sp)
+	li t0, 39
+	sb t0, 26(sp)
+	li t0, 78
+	sb t0, 27(sp)
+	li t0, 111
+	sb t0, 28(sp)
+	li t0, 110
+	sb t0, 29(sp)
+	li t0, 101
+	sb t0, 30(sp)
+	li t0, 84
+	sb t0, 31(sp)
+	li t0, 121
+	sb t0, 32(sp)
+	li t0, 112
+	sb t0, 33(sp)
+	li t0, 101
+	sb t0, 34(sp)
+	li t0, 39
+	sb t0, 35(sp)
+	li t0, 32
+	sb t0, 36(sp)
+	li t0, 104
+	sb t0, 37(sp)
+	li t0, 97
+	sb t0, 38(sp)
+	li t0, 115
+	sb t0, 39(sp)
+	li t0, 32
+	sb t0, 40(sp)
+	li t0, 110
+	sb t0, 41(sp)
+	li t0, 111
+	sb t0, 42(sp)
+	li t0, 32
+	sb t0, 43(sp)
+	li t0, 108
+	sb t0, 44(sp)
+	li t0, 101
+	sb t0, 45(sp)
+	li t0, 110
+	sb t0, 46(sp)
+	li t0, 40
+	sb t0, 47(sp)
+	li t0, 41
+	sb t0, 48(sp)
+	li a0, 1
+	mv a1, sp
+	li a2, 49
+	li a7, 64
+	ecall
+	addi sp, sp, 52
+
+    	# Exit program
+	li a0, 1
+	li a7, 93
+	ecall
+_list_index_oob:
+	addi sp, sp, -36
+	li t0, 73
+	sb t0, 0(sp)
+	li t0, 110
+	sb t0, 1(sp)
+	li t0, 100
+	sb t0, 2(sp)
+	li t0, 101
+	sb t0, 3(sp)
+	li t0, 120
+	sb t0, 4(sp)
+	li t0, 69
+	sb t0, 5(sp)
+	li t0, 114
+	sb t0, 6(sp)
+	li t0, 114
+	sb t0, 7(sp)
+	li t0, 111
+	sb t0, 8(sp)
+	li t0, 114
+	sb t0, 9(sp)
+	li t0, 58
+	sb t0, 10(sp)
+	li t0, 32
+	sb t0, 11(sp)
+	li t0, 108
+	sb t0, 12(sp)
+	li t0, 105
+	sb t0, 13(sp)
+	li t0, 115
+	sb t0, 14(sp)
+	li t0, 116
+	sb t0, 15(sp)
+	li t0, 32
+	sb t0, 16(sp)
+	li t0, 105
+	sb t0, 17(sp)
+	li t0, 110
+	sb t0, 18(sp)
+	li t0, 100
+	sb t0, 19(sp)
+	li t0, 101
+	sb t0, 20(sp)
+	li t0, 120
+	sb t0, 21(sp)
+	li t0, 32
+	sb t0, 22(sp)
+	li t0, 111
+	sb t0, 23(sp)
+	li t0, 117
+	sb t0, 24(sp)
+	li t0, 116
+	sb t0, 25(sp)
+	li t0, 32
+	sb t0, 26(sp)
+	li t0, 111
+	sb t0, 27(sp)
+	li t0, 102
+	sb t0, 28(sp)
+	li t0, 32
+	sb t0, 29(sp)
+	li t0, 114
+	sb t0, 30(sp)
+	li t0, 97
+	sb t0, 31(sp)
+	li t0, 110
+	sb t0, 32(sp)
+	li t0, 103
+	sb t0, 33(sp)
+	li t0, 101
+	sb t0, 34(sp)
+	li a0, 1
+	mv a1, sp
+	li a2, 35
+	li a7, 64
+	ecall
+	addi sp, sp, 36
+
+    	# Exit program
+	li a0, 1
+	li a7, 93
+	ecall
+_list_index_none:
+	addi sp, sp, -52
+	li t0, 84
+	sb t0, 0(sp)
+	li t0, 121
+	sb t0, 1(sp)
+	li t0, 112
+	sb t0, 2(sp)
+	li t0, 101
+	sb t0, 3(sp)
+	li t0, 69
+	sb t0, 4(sp)
+	li t0, 114
+	sb t0, 5(sp)
+	li t0, 114
+	sb t0, 6(sp)
+	li t0, 111
+	sb t0, 7(sp)
+	li t0, 114
+	sb t0, 8(sp)
+	li t0, 58
+	sb t0, 9(sp)
+	li t0, 32
+	sb t0, 10(sp)
+	li t0, 39
+	sb t0, 11(sp)
+	li t0, 78
+	sb t0, 12(sp)
+	li t0, 111
+	sb t0, 13(sp)
+	li t0, 110
+	sb t0, 14(sp)
+	li t0, 101
+	sb t0, 15(sp)
+	li t0, 84
+	sb t0, 16(sp)
+	li t0, 121
+	sb t0, 17(sp)
+	li t0, 112
+	sb t0, 18(sp)
+	li t0, 101
+	sb t0, 19(sp)
+	li t0, 39
+	sb t0, 20(sp)
+	li t0, 32
+	sb t0, 21(sp)
+	li t0, 111
+	sb t0, 22(sp)
+	li t0, 98
+	sb t0, 23(sp)
+	li t0, 106
+	sb t0, 24(sp)
+	li t0, 101
+	sb t0, 25(sp)
+	li t0, 99
+	sb t0, 26(sp)
+	li t0, 116
+	sb t0, 27(sp)
+	li t0, 32
+	sb t0, 28(sp)
+	li t0, 105
+	sb t0, 29(sp)
+	li t0, 115
+	sb t0, 30(sp)
+	li t0, 32
+	sb t0, 31(sp)
+	li t0, 110
+	sb t0, 32(sp)
+	li t0, 111
+	sb t0, 33(sp)
+	li t0, 116
+	sb t0, 34(sp)
+	li t0, 32
+	sb t0, 35(sp)
+	li t0, 115
+	sb t0, 36(sp)
+	li t0, 117
+	sb t0, 37(sp)
+	li t0, 98
+	sb t0, 38(sp)
+	li t0, 115
+	sb t0, 39(sp)
+	li t0, 99
+	sb t0, 40(sp)
+	li t0, 114
+	sb t0, 41(sp)
+	li t0, 105
+	sb t0, 42(sp)
+	li t0, 112
+	sb t0, 43(sp)
+	li t0, 116
+	sb t0, 44(sp)
+	li t0, 97
+	sb t0, 45(sp)
+	li t0, 98
+	sb t0, 46(sp)
+	li t0, 108
+	sb t0, 47(sp)
+	li t0, 101
+	sb t0, 48(sp)
+	li a0, 1
+	mv a1, sp
+	li a2, 49
+	li a7, 64
+	ecall
+	addi sp, sp, 52
+
+    	# Exit program
+	li a0, 1
+	li a7, 93
+	ecall
+_error_div_zero:
+	addi sp, sp, -28
+	li t0, 68
+	sb t0, 0(sp)
+	li t0, 105
+	sb t0, 1(sp)
+	li t0, 118
+	sb t0, 2(sp)
+	li t0, 66
+	sb t0, 3(sp)
+	li t0, 121
+	sb t0, 4(sp)
+	li t0, 90
+	sb t0, 5(sp)
+	li t0, 101
+	sb t0, 6(sp)
+	li t0, 114
+	sb t0, 7(sp)
+	li t0, 111
+	sb t0, 8(sp)
+	li t0, 58
+	sb t0, 9(sp)
+	li t0, 32
+	sb t0, 10(sp)
+	li t0, 68
+	sb t0, 11(sp)
+	li t0, 105
+	sb t0, 12(sp)
+	li t0, 118
+	sb t0, 13(sp)
+	li t0, 105
+	sb t0, 14(sp)
+	li t0, 115
+	sb t0, 15(sp)
+	li t0, 105
+	sb t0, 16(sp)
+	li t0, 111
+	sb t0, 17(sp)
+	li t0, 110
+	sb t0, 18(sp)
+	li t0, 32
+	sb t0, 19(sp)
+	li t0, 98
+	sb t0, 20(sp)
+	li t0, 121
+	sb t0, 21(sp)
+	li t0, 32
+	sb t0, 22(sp)
+	li t0, 122
+	sb t0, 23(sp)
+	li t0, 101
+	sb t0, 24(sp)
+	li t0, 114
+	sb t0, 25(sp)
+	li t0, 111
+	sb t0, 26(sp)
+	li a0, 1
+	mv a1, sp
+	li a2, 27
+	li a7, 64
+	ecall
+	addi sp, sp, 28
+
+    	# Exit program
+	li a0, 1
+	li a7, 93
+	ecall
+_malloc:
+	la t0, _heap_tree_ptr
+	lw t1, 0(t0)
+	add t2, t1, a0
+	sw t2, 0(t0)
+	addi a0, t1, 0
+	ret

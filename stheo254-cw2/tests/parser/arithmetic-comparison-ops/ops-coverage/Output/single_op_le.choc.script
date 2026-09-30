@@ -1,0 +1,1 @@
+set -o pipefail;{ : 'RUN: at line 1';   choco-opt "/home/stheo/sklh/ct/stheo254-cw2/tests/parser/arithmetic-comparison-ops/ops-coverage/single_op_le.choc" | filecheck "/home/stheo/sklh/ct/stheo254-cw2/tests/parser/arithmetic-comparison-ops/ops-coverage/single_op_le.choc"; }

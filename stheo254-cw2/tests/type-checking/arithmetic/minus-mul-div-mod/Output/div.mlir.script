@@ -1,0 +1,1 @@
+set -o pipefail;{ : 'RUN: at line 1';   choco-opt -p check-assign-target,name-analysis,type-checking "/home/stheo/sklh/ct/stheo254-cw2/tests/type-checking/arithmetic/minus-mul-div-mod/div.mlir" | filecheck "/home/stheo/sklh/ct/stheo254-cw2/tests/type-checking/arithmetic/minus-mul-div-mod/div.mlir"; }

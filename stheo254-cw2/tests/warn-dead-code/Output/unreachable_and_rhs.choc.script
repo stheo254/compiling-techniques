@@ -1,0 +1,1 @@
+set -o pipefail;{ : 'RUN: at line 1';   choco-opt -p check-assign-target,name-analysis,type-checking,warn-dead-code "/home/stheo/sklh/ct/stheo254-cw2/tests/warn-dead-code/unreachable_and_rhs.choc" | filecheck "/home/stheo/sklh/ct/stheo254-cw2/tests/warn-dead-code/unreachable_and_rhs.choc"; }

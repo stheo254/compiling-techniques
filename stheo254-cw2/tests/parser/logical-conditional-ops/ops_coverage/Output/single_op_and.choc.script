@@ -1,0 +1,1 @@
+set -o pipefail;{ : 'RUN: at line 1';   choco-opt "/home/stheo/sklh/ct/stheo254-cw2/tests/parser/logical-conditional-ops/ops_coverage/single_op_and.choc" | filecheck "/home/stheo/sklh/ct/stheo254-cw2/tests/parser/logical-conditional-ops/ops_coverage/single_op_and.choc"; }

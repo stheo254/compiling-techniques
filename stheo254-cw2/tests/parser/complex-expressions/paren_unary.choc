@@ -1,0 +1,13 @@
+# RUN: choco-opt "%s" | filecheck "%s"
+
+-(42)
+
+# CHECK:      builtin.module {
+# CHECK-NEXT:   "choco_ast.program"() ({
+# CHECK-NEXT:   ^0:
+# CHECK-NEXT:   }, {
+# CHECK-NEXT:     "choco_ast.unary_expr"() <{"op" = "-"}> ({
+# CHECK-NEXT:       "choco_ast.literal"() <{"value" = 42 : i32}> : () -> ()
+# CHECK-NEXT:     }) : () -> ()
+# CHECK-NEXT:   }) : () -> ()
+# CHECK-NEXT: }

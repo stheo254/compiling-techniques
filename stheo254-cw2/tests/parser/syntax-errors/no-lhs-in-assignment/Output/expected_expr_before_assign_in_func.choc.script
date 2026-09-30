@@ -1,0 +1,1 @@
+set -o pipefail;{ : 'RUN: at line 1';   choco-opt "/home/stheo/sklh/ct/stheo254-cw2/tests/parser/syntax-errors/no-lhs-in-assignment/expected_expr_before_assign_in_func.choc" | filecheck "/home/stheo/sklh/ct/stheo254-cw2/tests/parser/syntax-errors/no-lhs-in-assignment/expected_expr_before_assign_in_func.choc"; }

@@ -1,0 +1,1 @@
+set -o pipefail;{ : 'RUN: at line 1';   choco-opt "/home/stheo/sklh/ct/stheo254-cw2/tests/parser/syntax-errors/indentation/expected_indent_before_block.choc" | filecheck "/home/stheo/sklh/ct/stheo254-cw2/tests/parser/syntax-errors/indentation/expected_indent_before_block.choc" --strict-whitespace; }

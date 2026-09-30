@@ -1,0 +1,1 @@
+set -o pipefail;{ : 'RUN: at line 1';   choco-opt "/home/stheo/sklh/ct/stheo254-cw2/tests/parser/literals-identifiers/literals_string.choc" | filecheck "/home/stheo/sklh/ct/stheo254-cw2/tests/parser/literals-identifiers/literals_string.choc"; }

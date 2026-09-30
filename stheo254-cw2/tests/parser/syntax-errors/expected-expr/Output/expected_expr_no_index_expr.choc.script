@@ -1,0 +1,1 @@
+set -o pipefail;{ : 'RUN: at line 1';   choco-opt "/home/stheo/sklh/ct/stheo254-cw2/tests/parser/syntax-errors/expected-expr/expected_expr_no_index_expr.choc" | filecheck "/home/stheo/sklh/ct/stheo254-cw2/tests/parser/syntax-errors/expected-expr/expected_expr_no_index_expr.choc"; }

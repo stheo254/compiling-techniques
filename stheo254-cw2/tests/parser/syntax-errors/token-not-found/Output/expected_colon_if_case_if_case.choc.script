@@ -1,0 +1,1 @@
+set -o pipefail;{ : 'RUN: at line 1';   choco-opt "/home/stheo/sklh/ct/stheo254-cw2/tests/parser/syntax-errors/token-not-found/expected_colon_if_case_if_case.choc" | filecheck "/home/stheo/sklh/ct/stheo254-cw2/tests/parser/syntax-errors/token-not-found/expected_colon_if_case_if_case.choc"; }

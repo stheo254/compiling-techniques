@@ -1,0 +1,1 @@
+set -o pipefail;{ : 'RUN: at line 1';   choco-opt "/home/stheo/sklh/ct/stheo254-cw2/tests/parser/variable-defs-decls/ops_coverage/vardef_global.choc" | filecheck "/home/stheo/sklh/ct/stheo254-cw2/tests/parser/variable-defs-decls/ops_coverage/vardef_global.choc"; }

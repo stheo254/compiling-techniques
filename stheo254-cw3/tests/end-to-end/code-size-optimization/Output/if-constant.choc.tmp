@@ -1,0 +1,711 @@
+	.data
+_heap:	.space 102400
+_heap_tree_ptr:	.word 100
+	.text
+# Initialize the heap memory
+	la t0, _heap
+	la t1, _heap_tree_ptr
+	sw t0, 0(t1)
+	jal ra, _main
+_main:
+	addi sp, sp, -4
+	sw ra, 0(sp)
+	addi sp, sp, -16
+	mv tp, sp
+
+    	# %0 = "riscv_ssa.li"() <{"immediate" = 1 : i32}> : () -> !riscv_ssa.re
+	li t0, 1
+	sw t0, 0(sp)
+
+    	# %1 = "riscv_ssa.li"() <{"immediate" = 0 : i32}> : () -> !riscv_ssa.re
+	li t0, 0
+	sw t0, 4(sp)
+
+    	# "riscv_ssa.beq"(%0, %1) <{"offset" = #riscv.label<orelse_1>}> : (!riscv_ssa.reg, !riscv_ssa.reg) -> (
+	lw t1, 0(sp)
+	lw t2, 4(sp)
+	beq t1, t2, orelse_1
+
+    	# "riscv_ssa.label"() <{"label" = #riscv.label<then_1>}> : () -> (
+then_1:
+
+    	# %2 = "riscv_ssa.li"() <{"immediate" = 142 : i32}> : () -> !riscv_ssa.re
+	li t0, 142
+	sw t0, 8(sp)
+
+    	# riscv_ssa.call
+	lw a0, 8(sp)
+	jal ra, _print_int
+
+    	# "riscv_ssa.j"() <{"offset" = #riscv.label<after_1>}> : () -> (
+	j after_1
+
+    	# "riscv_ssa.label"() <{"label" = #riscv.label<orelse_1>}> : () -> (
+orelse_1:
+
+    	# %3 = "riscv_ssa.li"() <{"immediate" = 510 : i32}> : () -> !riscv_ssa.re
+	li t0, 510
+	sw t0, 12(sp)
+
+    	# riscv_ssa.call
+	lw a0, 12(sp)
+	jal ra, _print_int
+
+    	# "riscv_ssa.label"() <{"label" = #riscv.label<after_1>}> : () -> (
+after_1:
+
+    	# Footer Ops
+__main_return:
+	addi sp, sp, 16
+	lw ra, 0(sp)
+	addi sp, sp, 4
+
+    	# Exit program
+	li a0, 0
+	li a7, 93
+	ecall
+_print_int:
+	addi sp, sp, -12
+	mv t1, a0
+	li t2, 10
+	slti t6, t1, 0
+	slti t6, t1, 0
+	li t5, 2
+	mul t6, t5, t6
+	li t5, 1
+	sub t5, t5, t6
+	mul t1, t5, t1
+	mv t6, zero
+	rem t0, t1, t2
+	addi t0, t0, 48
+	slti t3, t1, 1
+	add t6, t6, t3
+	sb t0, 10(sp)
+	div t1, t1, t2
+	rem t0, t1, t2
+	addi t0, t0, 48
+	slti t3, t1, 1
+	add t6, t6, t3
+	sb t0, 9(sp)
+	div t1, t1, t2
+	rem t0, t1, t2
+	addi t0, t0, 48
+	slti t3, t1, 1
+	add t6, t6, t3
+	sb t0, 8(sp)
+	div t1, t1, t2
+	rem t0, t1, t2
+	addi t0, t0, 48
+	slti t3, t1, 1
+	add t6, t6, t3
+	sb t0, 7(sp)
+	div t1, t1, t2
+	rem t0, t1, t2
+	addi t0, t0, 48
+	slti t3, t1, 1
+	add t6, t6, t3
+	sb t0, 6(sp)
+	div t1, t1, t2
+	rem t0, t1, t2
+	addi t0, t0, 48
+	slti t3, t1, 1
+	add t6, t6, t3
+	sb t0, 5(sp)
+	div t1, t1, t2
+	rem t0, t1, t2
+	addi t0, t0, 48
+	slti t3, t1, 1
+	add t6, t6, t3
+	sb t0, 4(sp)
+	div t1, t1, t2
+	rem t0, t1, t2
+	addi t0, t0, 48
+	slti t3, t1, 1
+	add t6, t6, t3
+	sb t0, 3(sp)
+	div t1, t1, t2
+	rem t0, t1, t2
+	addi t0, t0, 48
+	slti t3, t1, 1
+	add t6, t6, t3
+	sb t0, 2(sp)
+	div t1, t1, t2
+	rem t0, t1, t2
+	addi t0, t0, 48
+	slti t3, t1, 1
+	slt t4, zero, a0
+	slt t5, a0, zero
+	or t4, t4, t5
+	and t3, t3, t4
+	add t6, t6, t3
+	sb t0, 1(sp)
+	div t1, t1, t2
+	slti t5, t5, -1
+	add t6, t6, t5
+	li t5, 45
+	add t4, sp, t6
+	sb t5, 0(t4)
+	li t4, -1
+	slt t3, t4, a0
+	add t6, t6, t3
+	li t0, 10
+	sb t0, 11(sp)
+	li a0, 1
+	mv a1, sp
+	add a1, a1, t6
+	li a2, 12
+	sub a2, a2, t6
+	li a7, 64
+	ecall
+	addi sp, sp, 12
+	ret
+_print_bool:
+	addi sp, sp, -16
+	li t0, 70
+	sb t0, 0(sp)
+	li t0, 97
+	sb t0, 1(sp)
+	li t0, 108
+	sb t0, 2(sp)
+	li t0, 115
+	sb t0, 3(sp)
+	li t0, 101
+	sb t0, 4(sp)
+	li t0, 10
+	sb t0, 5(sp)
+	li t0, 0
+	sb t0, 6(sp)
+	li t0, 84
+	sb t0, 7(sp)
+	li t0, 114
+	sb t0, 8(sp)
+	li t0, 117
+	sb t0, 9(sp)
+	li t0, 101
+	sb t0, 10(sp)
+	li t0, 10
+	sb t0, 11(sp)
+	li t0, 0
+	sb t0, 12(sp)
+	li t1, 7
+	sltu t2, zero, a0
+	mul t1, t1, t2
+	add t1, t1, sp
+	li t3, 6
+	sltu t4, zero, a0
+	sub t4, t3, t4
+	li a0, 1
+	mv a1, t1
+	mv a2, t4
+	li a7, 64
+	ecall
+	addi sp, sp, 16
+	ret
+_print_str:
+	addi t0, a0, 0
+	lw t2, 0(t0)
+	li t1, 0
+	sub sp, sp, t2
+	addi sp, sp, -1
+	beq t1, t2, _print_str_loop_finished
+_print_str_loop_header:
+	li t6, 4
+	mul t3, t1, t6
+	add t4, t0, t3
+	lw t5, 4(t4)
+	add t4, sp, t1
+	sb t5, 0(t4)
+	addi t1, t1, 1
+	bne t1, t2, _print_str_loop_header
+_print_str_loop_finished:
+	add t4, sp, t1
+	li t5, 10
+	sb t5, 0(t4)
+	li a0, 1
+	mv a1, sp
+	addi t3, t2, 1
+	mv a2, t3
+	li a7, 64
+	ecall
+	addi sp, sp, 1
+	add sp, sp, t2
+	ret
+_input:
+	addi sp, sp, -1024
+	sw ra, 1020(sp)
+	li a0, 0
+	mv a1, sp
+	li a2, 1020
+	li a7, 63
+	ecall
+	li t1, 4
+	mv t4, a0
+	addi t4, t4, -1
+	mul a0, a0, t1
+	add a0, a0, t1
+	jal ra, _malloc
+	li t1, 4
+	sw t4, 0(a0)
+	li t5, 0
+	beq t4, t5, _input_loop_finished
+_input_loop_header:
+	add t3, sp, t5
+	lb t6, 0(t3)
+	mul t3, t5, t1
+	add t3, a0, t3
+	sw t6, 4(t3)
+	addi t5, t5, 1
+	bne t4, t5, _input_loop_header
+_input_loop_finished:
+	lw ra, 1020(sp)
+	addi sp, sp, 1024
+	ret
+_list_concat:
+	addi sp, sp, -24
+	lw t0, 0(a0)
+	lw t1, 0(a1)
+	add t2, t0, t1
+	li t3, 4
+	mul t4, t2, t3
+	addi t4, t4, 4
+	sw ra, 0(sp)
+	sw t0, 4(sp)
+	sw t1, 8(sp)
+	sw t2, 12(sp)
+	sw a0, 16(sp)
+	sw a1, 20(sp)
+	addi a0, t4, 0
+	jal ra, _malloc
+	lw ra, 0(sp)
+	lw t0, 4(sp)
+	lw t1, 8(sp)
+	lw t2, 12(sp)
+	lw t3, 16(sp)
+	lw t4, 20(sp)
+	sw t2, 0(a0)
+	li t5, 0
+	addi t6, a0, 0
+	beq t0, zero, _list_concat_repeat_first_end
+_list_concat_repeat_first:
+	addi t5, t5, 1
+	addi t3, t3, 4
+	addi t6, t6, 4
+	lw t2, 0(t3)
+	sw t2, 0(t6)
+	bne t5, t0, _list_concat_repeat_first
+_list_concat_repeat_first_end:
+	li t5, 0
+	beq t1, zero, _list_concat_repeat_second_end
+_list_concat_repeat_second:
+	addi t5, t5, 1
+	addi t4, t4, 4
+	addi t6, t6, 4
+	lw t2, 0(t4)
+	sw t2, 0(t6)
+	bne t5, t1, _list_concat_repeat_second
+_list_concat_repeat_second_end:
+	addi sp, sp, 24
+	ret
+_str_eq:
+	lw t0, 0(a0)
+	lw t1, 0(a1)
+	bne t0, t1, _str_eq_return_false
+	beq t0, zero, _str_eq_return_true
+	addi t2, a0, 4
+	addi t3, a1, 4
+	li t5, 4
+	mul t5, t0, t5
+	add t4, a0, t5
+	addi t4, t4, 4
+_str_eq_loop_begin:
+	lw t5, 0(t2)
+	lw t6, 0(t3)
+	bne t5, t6, _str_eq_return_false
+	addi t2, t2, 4
+	addi t3, t3, 4
+	blt t2, t4, _str_eq_loop_begin
+_str_eq_return_true:
+	li a0, 1
+	ret
+_str_eq_return_false:
+	li a0, 0
+	ret
+_error_len_none:
+	addi sp, sp, -52
+	li t0, 84
+	sb t0, 0(sp)
+	li t0, 121
+	sb t0, 1(sp)
+	li t0, 112
+	sb t0, 2(sp)
+	li t0, 101
+	sb t0, 3(sp)
+	li t0, 69
+	sb t0, 4(sp)
+	li t0, 114
+	sb t0, 5(sp)
+	li t0, 114
+	sb t0, 6(sp)
+	li t0, 111
+	sb t0, 7(sp)
+	li t0, 114
+	sb t0, 8(sp)
+	li t0, 58
+	sb t0, 9(sp)
+	li t0, 32
+	sb t0, 10(sp)
+	li t0, 111
+	sb t0, 11(sp)
+	li t0, 98
+	sb t0, 12(sp)
+	li t0, 106
+	sb t0, 13(sp)
+	li t0, 101
+	sb t0, 14(sp)
+	li t0, 99
+	sb t0, 15(sp)
+	li t0, 116
+	sb t0, 16(sp)
+	li t0, 32
+	sb t0, 17(sp)
+	li t0, 111
+	sb t0, 18(sp)
+	li t0, 102
+	sb t0, 19(sp)
+	li t0, 32
+	sb t0, 20(sp)
+	li t0, 116
+	sb t0, 21(sp)
+	li t0, 121
+	sb t0, 22(sp)
+	li t0, 112
+	sb t0, 23(sp)
+	li t0, 101
+	sb t0, 24(sp)
+	li t0, 32
+	sb t0, 25(sp)
+	li t0, 39
+	sb t0, 26(sp)
+	li t0, 78
+	sb t0, 27(sp)
+	li t0, 111
+	sb t0, 28(sp)
+	li t0, 110
+	sb t0, 29(sp)
+	li t0, 101
+	sb t0, 30(sp)
+	li t0, 84
+	sb t0, 31(sp)
+	li t0, 121
+	sb t0, 32(sp)
+	li t0, 112
+	sb t0, 33(sp)
+	li t0, 101
+	sb t0, 34(sp)
+	li t0, 39
+	sb t0, 35(sp)
+	li t0, 32
+	sb t0, 36(sp)
+	li t0, 104
+	sb t0, 37(sp)
+	li t0, 97
+	sb t0, 38(sp)
+	li t0, 115
+	sb t0, 39(sp)
+	li t0, 32
+	sb t0, 40(sp)
+	li t0, 110
+	sb t0, 41(sp)
+	li t0, 111
+	sb t0, 42(sp)
+	li t0, 32
+	sb t0, 43(sp)
+	li t0, 108
+	sb t0, 44(sp)
+	li t0, 101
+	sb t0, 45(sp)
+	li t0, 110
+	sb t0, 46(sp)
+	li t0, 40
+	sb t0, 47(sp)
+	li t0, 41
+	sb t0, 48(sp)
+	li a0, 1
+	mv a1, sp
+	li a2, 49
+	li a7, 64
+	ecall
+	addi sp, sp, 52
+
+    	# Exit program
+	li a0, 1
+	li a7, 93
+	ecall
+_list_index_oob:
+	addi sp, sp, -36
+	li t0, 73
+	sb t0, 0(sp)
+	li t0, 110
+	sb t0, 1(sp)
+	li t0, 100
+	sb t0, 2(sp)
+	li t0, 101
+	sb t0, 3(sp)
+	li t0, 120
+	sb t0, 4(sp)
+	li t0, 69
+	sb t0, 5(sp)
+	li t0, 114
+	sb t0, 6(sp)
+	li t0, 114
+	sb t0, 7(sp)
+	li t0, 111
+	sb t0, 8(sp)
+	li t0, 114
+	sb t0, 9(sp)
+	li t0, 58
+	sb t0, 10(sp)
+	li t0, 32
+	sb t0, 11(sp)
+	li t0, 108
+	sb t0, 12(sp)
+	li t0, 105
+	sb t0, 13(sp)
+	li t0, 115
+	sb t0, 14(sp)
+	li t0, 116
+	sb t0, 15(sp)
+	li t0, 32
+	sb t0, 16(sp)
+	li t0, 105
+	sb t0, 17(sp)
+	li t0, 110
+	sb t0, 18(sp)
+	li t0, 100
+	sb t0, 19(sp)
+	li t0, 101
+	sb t0, 20(sp)
+	li t0, 120
+	sb t0, 21(sp)
+	li t0, 32
+	sb t0, 22(sp)
+	li t0, 111
+	sb t0, 23(sp)
+	li t0, 117
+	sb t0, 24(sp)
+	li t0, 116
+	sb t0, 25(sp)
+	li t0, 32
+	sb t0, 26(sp)
+	li t0, 111
+	sb t0, 27(sp)
+	li t0, 102
+	sb t0, 28(sp)
+	li t0, 32
+	sb t0, 29(sp)
+	li t0, 114
+	sb t0, 30(sp)
+	li t0, 97
+	sb t0, 31(sp)
+	li t0, 110
+	sb t0, 32(sp)
+	li t0, 103
+	sb t0, 33(sp)
+	li t0, 101
+	sb t0, 34(sp)
+	li a0, 1
+	mv a1, sp
+	li a2, 35
+	li a7, 64
+	ecall
+	addi sp, sp, 36
+
+    	# Exit program
+	li a0, 1
+	li a7, 93
+	ecall
+_list_index_none:
+	addi sp, sp, -52
+	li t0, 84
+	sb t0, 0(sp)
+	li t0, 121
+	sb t0, 1(sp)
+	li t0, 112
+	sb t0, 2(sp)
+	li t0, 101
+	sb t0, 3(sp)
+	li t0, 69
+	sb t0, 4(sp)
+	li t0, 114
+	sb t0, 5(sp)
+	li t0, 114
+	sb t0, 6(sp)
+	li t0, 111
+	sb t0, 7(sp)
+	li t0, 114
+	sb t0, 8(sp)
+	li t0, 58
+	sb t0, 9(sp)
+	li t0, 32
+	sb t0, 10(sp)
+	li t0, 39
+	sb t0, 11(sp)
+	li t0, 78
+	sb t0, 12(sp)
+	li t0, 111
+	sb t0, 13(sp)
+	li t0, 110
+	sb t0, 14(sp)
+	li t0, 101
+	sb t0, 15(sp)
+	li t0, 84
+	sb t0, 16(sp)
+	li t0, 121
+	sb t0, 17(sp)
+	li t0, 112
+	sb t0, 18(sp)
+	li t0, 101
+	sb t0, 19(sp)
+	li t0, 39
+	sb t0, 20(sp)
+	li t0, 32
+	sb t0, 21(sp)
+	li t0, 111
+	sb t0, 22(sp)
+	li t0, 98
+	sb t0, 23(sp)
+	li t0, 106
+	sb t0, 24(sp)
+	li t0, 101
+	sb t0, 25(sp)
+	li t0, 99
+	sb t0, 26(sp)
+	li t0, 116
+	sb t0, 27(sp)
+	li t0, 32
+	sb t0, 28(sp)
+	li t0, 105
+	sb t0, 29(sp)
+	li t0, 115
+	sb t0, 30(sp)
+	li t0, 32
+	sb t0, 31(sp)
+	li t0, 110
+	sb t0, 32(sp)
+	li t0, 111
+	sb t0, 33(sp)
+	li t0, 116
+	sb t0, 34(sp)
+	li t0, 32
+	sb t0, 35(sp)
+	li t0, 115
+	sb t0, 36(sp)
+	li t0, 117
+	sb t0, 37(sp)
+	li t0, 98
+	sb t0, 38(sp)
+	li t0, 115
+	sb t0, 39(sp)
+	li t0, 99
+	sb t0, 40(sp)
+	li t0, 114
+	sb t0, 41(sp)
+	li t0, 105
+	sb t0, 42(sp)
+	li t0, 112
+	sb t0, 43(sp)
+	li t0, 116
+	sb t0, 44(sp)
+	li t0, 97
+	sb t0, 45(sp)
+	li t0, 98
+	sb t0, 46(sp)
+	li t0, 108
+	sb t0, 47(sp)
+	li t0, 101
+	sb t0, 48(sp)
+	li a0, 1
+	mv a1, sp
+	li a2, 49
+	li a7, 64
+	ecall
+	addi sp, sp, 52
+
+    	# Exit program
+	li a0, 1
+	li a7, 93
+	ecall
+_error_div_zero:
+	addi sp, sp, -28
+	li t0, 68
+	sb t0, 0(sp)
+	li t0, 105
+	sb t0, 1(sp)
+	li t0, 118
+	sb t0, 2(sp)
+	li t0, 66
+	sb t0, 3(sp)
+	li t0, 121
+	sb t0, 4(sp)
+	li t0, 90
+	sb t0, 5(sp)
+	li t0, 101
+	sb t0, 6(sp)
+	li t0, 114
+	sb t0, 7(sp)
+	li t0, 111
+	sb t0, 8(sp)
+	li t0, 58
+	sb t0, 9(sp)
+	li t0, 32
+	sb t0, 10(sp)
+	li t0, 68
+	sb t0, 11(sp)
+	li t0, 105
+	sb t0, 12(sp)
+	li t0, 118
+	sb t0, 13(sp)
+	li t0, 105
+	sb t0, 14(sp)
+	li t0, 115
+	sb t0, 15(sp)
+	li t0, 105
+	sb t0, 16(sp)
+	li t0, 111
+	sb t0, 17(sp)
+	li t0, 110
+	sb t0, 18(sp)
+	li t0, 32
+	sb t0, 19(sp)
+	li t0, 98
+	sb t0, 20(sp)
+	li t0, 121
+	sb t0, 21(sp)
+	li t0, 32
+	sb t0, 22(sp)
+	li t0, 122
+	sb t0, 23(sp)
+	li t0, 101
+	sb t0, 24(sp)
+	li t0, 114
+	sb t0, 25(sp)
+	li t0, 111
+	sb t0, 26(sp)
+	li a0, 1
+	mv a1, sp
+	li a2, 27
+	li a7, 64
+	ecall
+	addi sp, sp, 28
+
+    	# Exit program
+	li a0, 1
+	li a7, 93
+	ecall
+_malloc:
+	la t0, _heap_tree_ptr
+	lw t1, 0(t0)
+	add t2, t1, a0
+	sw t2, 0(t0)
+	addi a0, t1, 0
+	ret

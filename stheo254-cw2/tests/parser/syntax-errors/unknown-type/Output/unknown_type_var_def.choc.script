@@ -1,0 +1,1 @@
+set -o pipefail;{ : 'RUN: at line 1';   choco-opt "/home/stheo/sklh/ct/stheo254-cw2/tests/parser/syntax-errors/unknown-type/unknown_type_var_def.choc" | filecheck "/home/stheo/sklh/ct/stheo254-cw2/tests/parser/syntax-errors/unknown-type/unknown_type_var_def.choc" --strict-whitespace; }

@@ -1,0 +1,1 @@
+set -o pipefail;{ : 'RUN: at line 1';   choco-opt -p check-assign-target "/home/stheo/sklh/ct/stheo254-cw2/tests/check-assign-target/addition.mlir" | filecheck "/home/stheo/sklh/ct/stheo254-cw2/tests/check-assign-target/addition.mlir"; }

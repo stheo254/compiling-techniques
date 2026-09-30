@@ -1,0 +1,1 @@
+set -o pipefail;{ : 'RUN: at line 1';   choco-lexer "/home/stheo/sklh/ct/stheo254-cw2/tests/lexer/func_prototype_1.choc" | filecheck "/home/stheo/sklh/ct/stheo254-cw2/tests/lexer/func_prototype_1.choc"; }
